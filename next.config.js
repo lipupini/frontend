@@ -2,7 +2,7 @@
 const nextConfig = {
 	reactStrictMode: true,
 	publicRuntimeConfig: {
-		platformTitle: 'Installution',
+		platformTitle: 'Instalution',
 	},
 	serverRuntimeConfig: {
 		baseDir: __dirname,

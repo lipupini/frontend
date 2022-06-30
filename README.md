@@ -1,13 +1,13 @@
-# Installution
+# Instalution
 
-Installution aims to be a revolutionary solution to Instagram
+Instalution aims to be a revolutionary solution to Instagram
 
 ### Requirements
 - [Yarn](https://yarnpkg.com/) (And anything Yarn requires)
 
-### Installing Installution
-1) `git clone https://github.com/groovenectar/installution.git`
-2) `cd installution`
+### Installing Instalution
+1) `git clone https://github.com/groovenectar/instalution.git`
+2) `cd instalution`
 3) `yarn`
 4) `yarn next telemetry disable`
 5) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
@@ -19,4 +19,4 @@ Installution aims to be a revolutionary solution to Instagram
 
 ### Status
 
-While in very early stages, Installution already supports the standard archive directory structure as of June 2022, and will display both images and video from the archive once extracted.
+While in very early stages, Instalution already supports the standard archive directory structure as of June 2022, and will display both images and video from the archive once extracted.
