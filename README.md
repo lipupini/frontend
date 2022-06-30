@@ -17,3 +17,7 @@ Installution aims to be a revolutionary solution to Instagram
 9) In `.env.local`, put your archive folder name in the `ACCOUNT_ARCHIVE_FOLDER_NAME` variable
 10) `yarn start`
 11) [Delete your Instagram account](https://help.instagram.com/139886812848894/)
+
+### Status
+
+While in very early stages, Installution already supports the standard archive directory structure as of June 2022, and will display both images and video from the archive once extracted. Demo coming soon.
