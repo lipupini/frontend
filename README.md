@@ -19,4 +19,6 @@ Installution aims to be a revolutionary solution to Instagram
 
 ### Status
 
-While in very early stages, Installution already supports the standard archive directory structure as of June 2022, and will display both images and video from the archive once extracted. Demo coming soon.
+While in very early stages, Installution already supports the standard archive directory structure as of June 2022, and will display both images and video from the archive once extracted.
+
+A demo is available at https://installution.vercel.app/
