@@ -7,9 +7,9 @@ function escapeRegExp(string: string) {
 	return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
-const {serverRuntimeConfig, publicRuntimeConfig} = useConfig()
+const GetAllFiles = () => {
+	const {serverRuntimeConfig, publicRuntimeConfig} = useConfig()
 
-const getAllFiles = () => {
 	const publicFolder = serverRuntimeConfig.baseDir + '/public'
 	const filesFolder = publicFolder + '/accounts/' + process.env.ACCOUNT_ARCHIVE_FOLDER_NAME
 	let files = glob.sync(filesFolder + '/media/posts/**/*', { nodir: true})
@@ -32,7 +32,7 @@ export default function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {
-	res.status(200).json(getAllFiles())
+	res.status(200).json(GetAllFiles())
 }
 
 type Data = {
