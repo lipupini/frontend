@@ -30,12 +30,12 @@ const Home: NextPage = () => {
 
 	const imageMarkup = {
 		autoHeight: ((filename: string) => (
-			<a href={filename} target="_blank" rel="noopener">
+			<a href={filename} target="_blank" rel="noopener noreferrer">
 				<img src={filename} alt="" className="w-full" loading="lazy"/>
 			</a>
 		)),
 		square: ((filename: string) => (
-			<a href={filename} target="_blank" rel="noopener">
+			<a href={filename} target="_blank" rel="noopener noreferrer">
 				<div style={{backgroundImage: 'url("' + filename + '")'}}
 				     className="bg-no-repeat bg-center bg-cover w-full aspect-square"/>
 			</a>
