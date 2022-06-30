@@ -4,6 +4,9 @@ const nextConfig = {
 	publicRuntimeConfig: {
 		platformTitle: 'Installution',
 	},
+	serverRuntimeConfig: {
+		baseDir: __dirname,
+	}
 }
 
 module.exports = nextConfig

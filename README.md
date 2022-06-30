@@ -11,12 +11,11 @@ Installution aims to be a revolutionary solution to Instagram
 3) `yarn`
 4) `yarn next telemetry disable`
 5) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
-6) Extract the archive into `./public/accounts/[archive_folder]`
+6) Extract the archive into `./public/accounts/[archive_folder_name]`
 7) Copy `.env.local.example` to `.env.local`
-8) In `.env.local`, put the full path to the Installution directory in the `APP_BASE_PATH` variable
-9) In `.env.local`, put your archive folder name in the `ACCOUNT_ARCHIVE_FOLDER_NAME` variable
-10) `yarn start`
-11) [Delete your Instagram account](https://help.instagram.com/139886812848894/)
+8) In `.env.local`, put your archive folder name in the `ACCOUNT_ARCHIVE_FOLDER_NAME` variable
+9) `yarn start`
+10) [Delete your Instagram account](https://help.instagram.com/139886812848894/)
 
 ### Status
 

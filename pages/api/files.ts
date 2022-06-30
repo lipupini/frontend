@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import useConfig from 'next/config'
 
 const glob = require('glob');
 
@@ -6,15 +7,17 @@ function escapeRegExp(string: string) {
 	return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
+const {serverRuntimeConfig, publicRuntimeConfig} = useConfig()
+
 const getAllFiles = () => {
-	const publicFolder = process.env.APP_BASE_PATH + '/public'
+	const publicFolder = serverRuntimeConfig.baseDir + '/public'
 	const filesFolder = publicFolder + '/accounts/' + process.env.ACCOUNT_ARCHIVE_FOLDER_NAME
 	let files = glob.sync(filesFolder + '/media/posts/**/*', { nodir: true})
 	let totalFiles = files.length
 
 	for (let i = 0; i < totalFiles; i++) {
 		files[i] = files[i].replace(
-			new RegExp('^' + escapeRegExp(process.env.APP_BASE_PATH + '/public')), '')
+			new RegExp('^' + escapeRegExp(publicFolder)), '')
 	}
 
 	return {
