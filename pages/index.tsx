@@ -4,7 +4,7 @@ import Head from 'next/head'
 import getConfig from 'next/config'
 
 const Home: NextPage = () => {
-	const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
+	const {publicRuntimeConfig} = getConfig()
 	const [media, setMedia] = useState<ApiResponse>({
 		data: [],
 		meta: {},
@@ -56,8 +56,8 @@ const Home: NextPage = () => {
 								autoHeight ?
 									imageMarkup.autoHeight(filename) : imageMarkup.square(filename)
 								: (
-									<video controls className="w-full aspect-square" preload="none">
-										<source src={filename} type="video/mp4" />
+									<video controls className="w-full aspect-square" preload="metadata">
+										<source src={`${filename}#t=0.5`} type="video/mp4" />
 									</video>
 								)}
 						</div>
