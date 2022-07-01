@@ -24,7 +24,7 @@ export default function Handler(
 		return
 	}
 
-	const files = glob.sync(filesFolder + '/media/posts/**/*', { nodir: true})
+	const files = glob.sync(filesFolder + '/**/*', { nodir: true})
 	const totalFiles = files.length
 
 	for (let i = 0; i < totalFiles; i++) {
