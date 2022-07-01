@@ -21,4 +21,12 @@ Instalution aims to be a revolutionary solution to Instagram
 
 While in very early stages, Instalution already supports the standard archive directory structure as of June 2022, and will display both images and video from the archive once extracted.
 
-A demo may (or may not) be available at https://instalution.tclv.me/
+A demo may (or may not) be available at https://instalution.tclv.me/ which may or may not feel like sending a lot of static files or whole files at the moment
+
+### Short list of needs
+
+Both pagination and infinite scroll options with toggle
+
+Thumbnail generation and cache for all responsive viewports
+
+Toggle between squares and Masonry-style -- this is already implemented and hopefully merged in soon
