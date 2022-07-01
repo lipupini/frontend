@@ -28,5 +28,3 @@ A demo may (or may not) be available at https://instalution.tclv.me/ which may o
 Both pagination and infinite scroll options with toggle
 
 Thumbnail generation and cache for all responsive viewports
-
-Toggle between squares and Masonry-style -- this is already implemented and hopefully merged in soon

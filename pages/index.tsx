@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 		meta: {},
 	})
 
-	const autoHeight = false
+	const [ autoHeight, setAutoHeight ] = useState<boolean>(false)
 
 	useEffect(() => {
 		fetch('/api/files', {
@@ -34,13 +34,20 @@ const Home: NextPage = () => {
 				<img src={filename} alt="" className="w-full" loading="lazy"/>
 			</a>
 		)),
-		square: ((filename: string) => (
+		squareBackground: ((filename: string) => (
 			<a href={filename} target="_blank" rel="noopener noreferrer">
 				<div style={{backgroundImage: 'url("' + filename + '")'}} className="bg-no-repeat bg-center bg-cover">
 					<img src="/image/1x1.png" alt="" className="w-full aspect-square" loading="lazy"/>
 				</div>
 			</a>
-		))
+		)),
+		squareOverflowHidden: ((filename: string) => (
+			<a href={filename} target="_blank" rel="noopener noreferrer">
+				<div className="w-full aspect-square overflow-hidden flex justify-center">
+					<img src={filename} alt="" className="h-full" loading="lazy"/>
+				</div>
+			</a>
+		)),
 	}
 
 	return (
@@ -50,12 +57,17 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
+				<div className="p-10 flex">
+					<a href="#" onClick={() => setAutoHeight(prevState => !prevState)}>
+						Change display style to {autoHeight ? 'square' : 'auto height'}
+					</a>
+				</div>
 				<div className="columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-0">
 					{media && media.data.map((filename: string) => (
 						<div key={filename} className="">
 							{/\.(jpg|webp)$/.test(filename) ?
 								autoHeight ?
-									imageMarkup.autoHeight(filename) : imageMarkup.square(filename)
+									imageMarkup.autoHeight(filename) : imageMarkup.squareBackground(filename)
 								: (
 									<video controls className="w-full aspect-square" preload="metadata">
 										<source src={`${filename}#t=0.5`} type="video/mp4" />
