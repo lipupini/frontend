@@ -27,6 +27,6 @@ If there should be a frontend with login to manage photos and videos, it could b
 
 - Both pagination and infinite scroll options with toggle
 
-- Thumbnail generation and cache for all responsive viewports
+- Thumbnail generation and cache
 
 - Docker container
