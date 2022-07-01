@@ -36,8 +36,9 @@ const Home: NextPage = () => {
 		)),
 		square: ((filename: string) => (
 			<a href={filename} target="_blank" rel="noopener noreferrer">
-				<div style={{backgroundImage: 'url("' + filename + '")'}}
-				     className="bg-no-repeat bg-center bg-cover w-full aspect-square"/>
+				<div style={{backgroundImage: 'url("' + filename + '")'}} className="bg-no-repeat bg-center bg-cover">
+					<img src="/public/image/1x1.png" alt="" className="w-full aspect-square" loading="lazy"/>
+				</div>
 			</a>
 		))
 	}
