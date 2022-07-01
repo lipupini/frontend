@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import getConfig from 'next/config'
 import { useEffect, useState } from 'react'
-import { ApiResponse } from '../types'
+import { AppApiResponse } from '../types'
 
 const Home: NextPage = () => {
-	const [ accounts, setAccounts ] = useState<ApiResponse>({
+	const [ accounts, setAccounts ] = useState<AppApiResponse>({
 		data: [],
 		meta: {},
 	})
@@ -31,6 +31,7 @@ const Home: NextPage = () => {
 	return (
 		<div>
 			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<title>{publicRuntimeConfig.platformTitle}</title>
 			</Head>
 

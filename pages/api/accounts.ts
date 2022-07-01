@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import useConfig from 'next/config'
-import { Data } from '../../types'
+import { AppApiResponse } from '../../types'
 
 const glob = require('glob')
 const path = require('path')
 
 export default function Handler(
 	req: NextApiRequest,
-	res: NextApiResponse<Data>
+	res: NextApiResponse<AppApiResponse>
 ) {
 	const {serverRuntimeConfig} = useConfig()
 	const publicFolder = serverRuntimeConfig.baseDir + '/public'

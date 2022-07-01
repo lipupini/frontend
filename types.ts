@@ -1,11 +1,6 @@
-export interface ApiResponse {
+export interface AppApiResponse {
 	data: []
-	meta: {}
-}
-
-export type Data = {
-	data: string[],
 	meta: {
-		total: number
+		total?: number
 	}
 }

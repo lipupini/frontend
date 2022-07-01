@@ -1,16 +1,16 @@
-import type {NextPage} from 'next'
+import type { NextPage } from 'next'
 import {useEffect, useState} from 'react'
 import Head from 'next/head'
 import getConfig from 'next/config'
 import { useRouter } from 'next/router'
-import { ApiResponse } from '../types'
+import { AppApiResponse } from '../types'
 
 const Home: NextPage = () => {
 	const router = useRouter()
 	const { account } = router.query
 
 	const {publicRuntimeConfig} = getConfig()
-	const [media, setMedia] = useState<ApiResponse>({
+	const [media, setMedia] = useState<AppApiResponse>({
 		data: [],
 		meta: {},
 	})
@@ -58,6 +58,7 @@ const Home: NextPage = () => {
 	return (
 		<div>
 			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<title>{publicRuntimeConfig.platformTitle}</title>
 			</Head>
 
