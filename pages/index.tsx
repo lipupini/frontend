@@ -59,7 +59,7 @@ const Home: NextPage = () => {
 			<main>
 				<div className="p-10 flex">
 					<a href="#" onClick={() => setAutoHeight(prevState => !prevState)}>
-						Change display style to {autoHeight ? 'square' : 'auto height'}
+						Display Style: {autoHeight ? 'Auto Height' : 'Square'}
 					</a>
 				</div>
 				<div className="columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-0">
