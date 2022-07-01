@@ -1,43 +1,41 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import useConfig from 'next/config'
+import { Data } from '../../types'
 
-const glob = require('glob');
+const glob = require('glob')
+const fs = require('fs')
 
-function escapeRegExp(string: string) {
+const escapeRegExp = (string: string) => {
 	return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
-const GetAllFiles = () => {
-	const {serverRuntimeConfig, publicRuntimeConfig} = useConfig()
+export default function Handler(
+	req: NextApiRequest,
+	res: NextApiResponse<Data>
+) {
+	const {serverRuntimeConfig} = useConfig()
+	const query = req.query;
+	const { account } = query;
 
 	const publicFolder = serverRuntimeConfig.baseDir + '/public'
-	const filesFolder = publicFolder + '/accounts/' + process.env.ACCOUNT_ARCHIVE_FOLDER_NAME
-	let files = glob.sync(filesFolder + '/media/posts/**/*', { nodir: true})
-	let totalFiles = files.length
+	const filesFolder = publicFolder + '/accounts/' + account
+
+	if (!fs.existsSync(filesFolder)) {
+		return
+	}
+
+	const files = glob.sync(filesFolder + '/media/posts/**/*', { nodir: true})
+	const totalFiles = files.length
 
 	for (let i = 0; i < totalFiles; i++) {
 		files[i] = files[i].replace(
 			new RegExp('^' + escapeRegExp(publicFolder)), '')
 	}
 
-	return {
+	res.status(200).json({
 		data: files,
 		meta: {
 			total: totalFiles,
 		}
-	}
-}
-
-export default function handler(
-	req: NextApiRequest,
-	res: NextApiResponse<Data>
-) {
-	res.status(200).json(GetAllFiles())
-}
-
-type Data = {
-	data: string[],
-	meta: {
-		total: number
-	}
+	})
 }

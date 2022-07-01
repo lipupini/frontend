@@ -1,54 +1,32 @@
-import type {NextPage} from 'next'
-import {useEffect, useState} from 'react'
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import getConfig from 'next/config'
+import { useEffect, useState } from 'react'
+import { ApiResponse } from '../types'
 
 const Home: NextPage = () => {
-	const {publicRuntimeConfig} = getConfig()
-	const [media, setMedia] = useState<ApiResponse>({
+	const [ accounts, setAccounts ] = useState<ApiResponse>({
 		data: [],
 		meta: {},
 	})
 
-	const [ autoHeight, setAutoHeight ] = useState<boolean>(false)
+	const { publicRuntimeConfig } = getConfig()
 
 	useEffect(() => {
-		fetch('/api/files', {
+		fetch('/api/accounts', {
 			method: 'GET',
 			headers: { 'Content-type': 'application/json' },
 		})
 			.then(response => response.json())
 			.then(
 				(response) => {
-					setMedia(response)
+					setAccounts(response)
 				},
 				(error) => {
 					console.log(error)
 				}
 			);
 	}, [])
-
-	const imageMarkup = {
-		autoHeight: ((filename: string) => (
-			<a href={filename} target="_blank" rel="noopener noreferrer">
-				<img src={filename} alt="" className="w-full" loading="lazy"/>
-			</a>
-		)),
-		squareBackground: ((filename: string) => (
-			<a href={filename} target="_blank" rel="noopener noreferrer">
-				<div style={{backgroundImage: 'url("' + filename + '")'}} className="bg-no-repeat bg-center bg-cover">
-					<img src="/image/1x1.png" alt="" className="w-full aspect-square" loading="lazy"/>
-				</div>
-			</a>
-		)),
-		squareOverflowHidden: ((filename: string) => (
-			<a href={filename} target="_blank" rel="noopener noreferrer">
-				<div className="w-full aspect-square overflow-hidden flex justify-center">
-					<img src={filename} alt="" className="h-full" loading="lazy"/>
-				</div>
-			</a>
-		)),
-	}
 
 	return (
 		<div>
@@ -57,37 +35,14 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
-				<div className="p-10 flex">
-					<a href="#" onClick={() => setAutoHeight(prevState => !prevState)}>
-						Display Style: {autoHeight ? 'Auto Height' : 'Square'}
-					</a>
-				</div>
-				<div className="columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-0">
-					{media && media.data.map((filename: string) => (
-						<div key={filename} className="">
-							{/\.(jpg|webp)$/.test(filename) ?
-								autoHeight ?
-									imageMarkup.autoHeight(filename) : imageMarkup.squareBackground(filename)
-								: (
-									<video controls className="w-full aspect-square" preload="metadata">
-										<source src={`${filename}#t=0.5`} type="video/mp4" />
-									</video>
-								)}
-						</div>
-					))}
-				</div>
+				<ul className="p-10">
+					{accounts ? accounts.data.map((account: string) => (
+						<li key={account}><a href={'/' + account}>{account}</a></li>
+					)) : <li>No accounts loaded</li>}
+				</ul>
 			</main>
-
-			<footer>
-
-			</footer>
 		</div>
 	)
-}
-
-interface ApiResponse {
-	data: []
-	meta: {}
 }
 
 export default Home
