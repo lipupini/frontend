@@ -20,8 +20,11 @@ Instalution aims to be a revolutionary solution to Instagram
 While in very early stages, Instalution will display both images and video from the archive once extracted. It technically doesn't have to be an Instagram archive, you can put any media in the username folders.
 
 A demo may (or may not) be available at [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
-### Short list of needs
+
+### Short list of needs / TODOs
 
 - Both pagination and infinite scroll options with toggle
 
 - Thumbnail generation and cache for all responsive viewports
+
+- Docker container
