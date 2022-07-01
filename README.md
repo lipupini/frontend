@@ -21,6 +21,8 @@ While in very early stages, Instalution will display both images and video from 
 
 A demo may (or may not) be available at [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
 
+If there should be a frontend with login to manage photos and videos, it could be a separate project and at the simplest form all it would require is a file manager fixed to usernames at `./public/accounts/[username]`
+
 ### Short list of needs / TODOs
 
 - Both pagination and infinite scroll options with toggle

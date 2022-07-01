@@ -1,0 +1,5 @@
+You are free to use and add to all or any part of this codebase for both commercial and non-commercial purposes.
+
+You are encouraged but not required to give back to the community.
+
+Please include this license somewhere in your codebase.
