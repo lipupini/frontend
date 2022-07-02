@@ -62,7 +62,7 @@ const Home: NextPage = () => {
 				<title>{publicRuntimeConfig.platformTitle}</title>
 			</Head>
 
-			<main className="bg-gray-800 text-gray-100">
+			<main>
 				<div className="p-10 flex">
 					<div className="grow-0">
 						<button onClick={() => setAutoHeight(prevState => !prevState)}>
