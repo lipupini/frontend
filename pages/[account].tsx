@@ -18,6 +18,10 @@ const Home: NextPage = () => {
 	const [ autoHeight, setAutoHeight ] = useState<boolean>(false)
 
 	useEffect(() => {
+		if (!account) {
+			return
+		}
+
 		fetch('/api/files?account=' + account, {
 			method: 'GET',
 			headers: { 'Content-type': 'application/json' },
@@ -83,7 +87,7 @@ const Home: NextPage = () => {
 								autoHeight ?
 									imageMarkup.autoHeight(filename) : imageMarkup.squareBackground(filename)
 								: (
-									<video controls className="w-full aspect-square" preload="metadata">
+									<video controls className="w-full aspect-square" preload="metadata" loop>
 										<source src={`${filename}#t=0.5`} type="video/mp4" />
 									</video>
 								)}
