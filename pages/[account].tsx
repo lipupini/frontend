@@ -62,11 +62,19 @@ const Home: NextPage = () => {
 				<title>{publicRuntimeConfig.platformTitle}</title>
 			</Head>
 
-			<main>
+			<main className="bg-gray-800 text-gray-100">
 				<div className="p-10 flex">
-					<button onClick={() => setAutoHeight(prevState => !prevState)}>
-						Display Style: {autoHeight ? 'Auto Height' : 'Square'}
-					</button>
+					<div className="grow-0">
+						<button onClick={() => setAutoHeight(prevState => !prevState)}>
+							{autoHeight ? '🌐' : '⬜'}
+						</button>
+					</div>
+					<div className="grow" />
+					<div className="grow-0">
+						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener">
+							?
+						</a>
+					</div>
 				</div>
 				<div className="columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-0">
 					{media && media.data.map((filename: string) => (
