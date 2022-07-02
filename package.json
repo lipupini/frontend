@@ -3,9 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "NEXT_TELEMETRY_DISABLED=1 next dev",
+		"dev": "NEXT_TELEMETRY_DISABLED=1 next dev --port 1234",
 		"build": "NEXT_TELEMETRY_DISABLED=1 next build",
-		"start": "NEXT_TELEMETRY_DISABLED=1 next start",
+		"start": "NEXT_TELEMETRY_DISABLED=1 next start --port 1234",
 		"lint": "NEXT_TELEMETRY_DISABLED=1 next lint"
 	},
 	"dependencies": {

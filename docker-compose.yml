@@ -1,0 +1,13 @@
+version: "2"
+services:
+  instalution:
+    tty: true
+    image: "node:16"
+    container_name: instalution
+    network_mode: "host"
+    expose:
+      - "1234"
+    volumes:
+      - ./:/home/node/app
+    working_dir: /home/node/app
+    command: yarn dev --port 1234
