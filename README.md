@@ -44,7 +44,7 @@ If there should be a frontend with login to manage photos and videos, it could b
 
 - Thumbnail generation and cache
 
-### FaQ You
+### No one has asked any questions at all yet here is an FAQ, technically then the following are lies:
 
 - If you are proxying via Nginx, and run into a weird issue with Nginx serving static files via a specific user, then try this:
 
