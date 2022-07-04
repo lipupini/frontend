@@ -10,6 +10,7 @@ const Home: NextPage = () => {
 	const { account } = router.query
 
 	const {publicRuntimeConfig} = getConfig()
+	const [page, setPage] = useState<number>(1)
 	const [media, setMedia] = useState<AppApiResponse>({
 		data: [],
 		meta: {},
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
 			return
 		}
 
-		fetch('/api/files?account=' + account, {
+		fetch('/api/files?account=' + account + '&page=' + page, {
 			method: 'GET',
 			headers: { 'Content-type': 'application/json' },
 		})
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
 					console.log(error)
 				}
 			);
-	}, [account])
+	}, [account, page])
 
 	const imageMarkup = {
 		autoHeight: ((filename: string) => (
@@ -73,7 +74,16 @@ const Home: NextPage = () => {
 							{autoHeight ? '🌐' : '⬜'}
 						</button>
 					</div>
-					<div className="grow" />
+					<div className="grow text-center">
+						<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev}>
+							←
+						</button>
+					</div>
+					<div className="grow text-center">
+						<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext}>
+							→
+						</button>
+					</div>
 					<div className="grow-0">
 						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener">
 							?
