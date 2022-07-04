@@ -6,3 +6,7 @@ export interface AppApiResponse {
 		hasNext?: boolean
 	}
 }
+
+export interface AppLocaleTranslation {
+	[index: string]: { [index: string]: string }
+}

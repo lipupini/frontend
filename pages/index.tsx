@@ -3,6 +3,7 @@ import Head from 'next/head'
 import getConfig from 'next/config'
 import { useEffect, useState } from 'react'
 import { AppApiResponse } from '../types'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
 	const [ accounts, setAccounts ] = useState<AppApiResponse>({
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
 			<main>
 				<ul className="p-10">
 					{accounts ? accounts.data.map((account: string) => (
-						<li key={account}><a href={'/' + account}>{account}</a></li>
+						<li key={account}><Link href={'/' + account}>{account}</Link></li>
 					)) : <li>No accounts loaded</li>}
 				</ul>
 			</main>

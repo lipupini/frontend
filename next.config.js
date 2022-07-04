@@ -6,7 +6,11 @@ const nextConfig = {
 	},
 	serverRuntimeConfig: {
 		baseDir: __dirname,
-	}
+	},
+	i18n: {
+		locales: ['en', 'fr', 'es', 'de', 'ru'],
+		defaultLocale: 'en',
+	},
 }
 
 module.exports = nextConfig

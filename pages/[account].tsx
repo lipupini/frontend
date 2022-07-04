@@ -4,9 +4,16 @@ import Head from 'next/head'
 import getConfig from 'next/config'
 import { useRouter } from 'next/router'
 import { AppApiResponse } from '../types'
+import { translations as t } from '../i18n'
 
 const Home: NextPage = () => {
 	const router = useRouter()
+	const { locale } = useRouter()
+
+	if (!locale) {
+		throw new Error('Could not determine locale')
+	}
+
 	const { account } = router.query
 
 	const {publicRuntimeConfig} = getConfig()
@@ -70,31 +77,31 @@ const Home: NextPage = () => {
 			<main>
 				<div className="p-10 flex">
 					<div className="grow-0">
-						<button onClick={() => setAutoHeight(prevState => !prevState)}>
+						<button onClick={() => setAutoHeight(prevState => !prevState)} title={t[locale].toggleLayout}>
 							{autoHeight ? '🌐' : '⬜'}
 						</button>
 					</div>
 					{(media.meta.hasPrev || media.meta.hasNext) &&
 						<div className="grow text-right">
-							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev}>
+							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev} title={t[locale].previous}>
 								←
 							</button>
 						</div>
 					}
 					<div className="grow text-center">
-						<button onClick={() => router.push('/')}>
+						<button onClick={() => router.push('/')} title={t[locale].index}>
 							↑
 						</button>
 					</div>
 					{(media.meta.hasPrev || media.meta.hasNext) &&
 						<div className="grow text-left">
-							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext}>
+							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext} title={t[locale].next}>
 								→
 							</button>
 						</div>
 					}
 					<div className="grow-0">
-						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener">
+						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener" title={t[locale].about}>
 							?
 						</a>
 					</div>
