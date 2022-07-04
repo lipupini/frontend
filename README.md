@@ -1,8 +1,10 @@
 # Instalution
 
-Instalution aims to be a revolutionary solution to Instagram
+Instalution aims to be a revolutionary solution to Instagram.
 
 ## Requirements
+
+There are currently four supported methods for getting up and running with Instalution. You only need to pick one method.
 
 ### Yarn Method
 
