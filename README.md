@@ -2,6 +2,12 @@
 
 Instalution aims to be a revolutionary solution to Instagram.
 
+In search of like-minded individuals to start a development community:
+
+1) Artists would like to take control of their portfolios
+2) Developers interested in contributing code
+3) Users with any ideas or insights on the project
+
 ## Requirements
 
 There are currently four supported methods for getting up and running with Instalution. You only need to pick one method.
