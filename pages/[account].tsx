@@ -40,12 +40,12 @@ const Home: NextPage = () => {
 	const imageMarkup = {
 		autoHeight: ((filename: string) => (
 			<a href={filename} target="_blank" rel="noopener noreferrer">
-				<img src={filename} alt="" className="w-full" loading="lazy"/>
+				<img src={`/api/thumbnail?image=${filename}`} alt="" className="w-full" loading="lazy" />
 			</a>
 		)),
 		squareBackground: ((filename: string) => (
 			<a href={filename} target="_blank" rel="noopener noreferrer">
-				<div style={{backgroundImage: 'url("' + filename + '")'}} className="bg-no-repeat bg-center bg-cover">
+				<div style={{backgroundImage: 'url("/api/thumbnail?image=' + filename + '")'}} className="bg-no-repeat bg-center bg-cover">
 					<img src="/image/1x1.png" alt="" className="w-full aspect-square" loading="lazy"/>
 				</div>
 			</a>
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 		squareOverflowHidden: ((filename: string) => (
 			<a href={filename} target="_blank" rel="noopener noreferrer">
 				<div className="w-full aspect-square overflow-hidden flex justify-center">
-					<img src={filename} alt="" className="h-full" loading="lazy"/>
+					<img src={`/api/thumbnail?image=${filename}`} alt="" className="h-full" loading="lazy" />
 				</div>
 			</a>
 		)),

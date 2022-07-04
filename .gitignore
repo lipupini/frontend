@@ -2,6 +2,7 @@
 
 /.env.local
 /public/accounts/*
+!/public/accounts/example
 /.vagrant
 
 # dependencies
