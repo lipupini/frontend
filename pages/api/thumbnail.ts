@@ -5,7 +5,7 @@ import { AppApiResponse } from '../../types'
 const sharp = require('sharp')
 const fs = require('fs')
 
-export default function Handler(
+export default async function Handler(
 	req: NextApiRequest,
 	res: NextApiResponse<AppApiResponse>
 ) {
@@ -20,7 +20,7 @@ export default function Handler(
 		return
 	}
 
-	sharp(fullImagePath)
+	await sharp(fullImagePath)
 		.resize({ width: 400 })
 		.jpeg({
 			quality: 89,
@@ -30,4 +30,6 @@ export default function Handler(
 			res.setHeader('Content-Type', 'image/jpg')
 			res.send(data)
 		});
+
+	return res.end()
 }
