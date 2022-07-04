@@ -6,11 +6,16 @@ Instalution aims to be a revolutionary solution to Instagram
 
 ### Yarn Method
 
-- [Yarn](https://yarnpkg.com/) (and anything Yarn requires)
+- [Yarn](https://yarnpkg.com/)
 
 ### Docker Compose Method
 
-- [Docker Compose](https://docs.docker.com/compose/install/) (and anything Docker Compose requires)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### Vagrant Method
+
+- [Vagrant](https://vagrantup.com/)
+- [VirtualBox](https://virtualbox.org/)
 
 ### Option 1: Installing Instalution with Yarn
 1) `git clone https://github.com/groovenectar/instalution.git`
@@ -28,6 +33,14 @@ Instalution aims to be a revolutionary solution to Instagram
 3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
 4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
 5) `docker-compose up` -- Instalution should now be available at http://localhost:1234
+6) [Delete your Instagram account](https://help.instagram.com/139886812848894/)
+
+### Option 3: Installing Instalution with Vagrant
+1) `git clone https://github.com/groovenectar/instalution.git`
+2) `cd instalution`
+3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
+4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
+5) `vagrant up` -- Instalution should now be available at http://localhost:1234
 6) [Delete your Instagram account](https://help.instagram.com/139886812848894/)
 
 ### Status
