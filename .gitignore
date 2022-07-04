@@ -2,6 +2,7 @@
 
 /.env.local
 /public/accounts/*
+/.vagrant
 
 # dependencies
 /node_modules
@@ -39,3 +40,6 @@ yarn-error.log*
 
 # ide
 /.idea
+/test-results/
+/playwright-report/
+/playwright/.cache/
