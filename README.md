@@ -72,7 +72,9 @@ There are currently four supported methods for getting up and running with Insta
 
 Instalution currently displays both images and video from the archive once extracted. It technically doesn't have to be an Instagram archive, you can put any media in the username folders.
 
-A demo may (or may not) be available at [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
+A demo is probably available at [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
+
+Hopefully more soon :)
 
 If there should be a frontend with login to manage photos and videos, it could be a separate project and at the simplest form all it would require is a file manager fixed to usernames at `./public/accounts/[username]`. In fact, perhaps these could eventually optionally correspond to OS usernames (e.g. in `/home/` or `C:/Users/` etc).
 
