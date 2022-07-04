@@ -4,7 +4,7 @@ $provision = <<-SCRIPT
 	sudo apt update
 	sudo apt install -y yarn
 
-	cd /home/vagrant
+	cd /home/vagrant/instalution
 	yarn
 	yarn next telemetry disable
 	sudo yarn global add pm2
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 	# SSH login is --
 	# vagrant:vagrant
 	config.vm.box = "generic/ubuntu2104"
-	config.vm.synced_folder ".", "/home/vagrant"
+	config.vm.synced_folder ".", "/home/vagrant/instalution"
 	config.vm.network "forwarded_port", guest: 1234, host: 1234
 	config.vm.provision "shell", inline: $provision
 end
