@@ -72,6 +72,6 @@ If there should be a frontend with login to manage photos and videos, it could b
 
 ### Short list of needs / TODOs
 
-- Both pagination and infinite scroll options with toggle
+- Add infinite scroll paging option
 
 - Add filesystem cache for thumbnail generation
