@@ -75,33 +75,33 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
-				<div className="p-10 flex">
+				<div className="p-5 flex">
 					<div className="grow-0">
-						<button onClick={() => setAutoHeight(prevState => !prevState)} title={t[locale].toggleLayout}>
+						<button onClick={() => setAutoHeight(prevState => !prevState)} title={t[locale].toggleLayout} className="p-5">
 							{autoHeight ? '🌐' : '⬜'}
 						</button>
 					</div>
 					{(media.meta.hasPrev || media.meta.hasNext) &&
 						<div className="grow text-right">
-							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev} title={t[locale].previous}>
+							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev} title={t[locale].previous} className="p-5">
 								←
 							</button>
 						</div>
 					}
 					<div className="grow text-center">
-						<button onClick={() => router.push('/')} title={t[locale].index}>
+						<button onClick={() => router.push('/')} title={t[locale].index} className="p-5">
 							↑
 						</button>
 					</div>
 					{(media.meta.hasPrev || media.meta.hasNext) &&
 						<div className="grow text-left">
-							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext} title={t[locale].next}>
+							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext} title={t[locale].next} className="p-5">
 								→
 							</button>
 						</div>
 					}
 					<div className="grow-0">
-						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener" title={t[locale].about}>
+						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener" title={t[locale].about} className="p-5 block">
 							?
 						</a>
 					</div>
