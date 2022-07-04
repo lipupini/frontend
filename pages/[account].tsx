@@ -74,16 +74,25 @@ const Home: NextPage = () => {
 							{autoHeight ? '🌐' : '⬜'}
 						</button>
 					</div>
+					{(media.meta.hasPrev || media.meta.hasNext) &&
+						<div className="grow text-right">
+							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev}>
+								←
+							</button>
+						</div>
+					}
 					<div className="grow text-center">
-						<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev}>
-							←
+						<button onClick={() => router.push('/')}>
+							↑
 						</button>
 					</div>
-					<div className="grow text-center">
-						<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext}>
-							→
-						</button>
-					</div>
+					{(media.meta.hasPrev || media.meta.hasNext) &&
+						<div className="grow text-left">
+							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext}>
+								→
+							</button>
+						</div>
+					}
 					<div className="grow-0">
 						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener">
 							?
