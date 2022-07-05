@@ -85,5 +85,3 @@ If there should be a frontend with login to manage photos and videos, it could b
 - Add infinite scroll paging option
 
 - Add filesystem cache for thumbnail generation
-
-- Use a cog icon instead of a square to indicate a settings modal
