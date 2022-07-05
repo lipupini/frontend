@@ -2,7 +2,7 @@ export interface AppApiResponse {
 	data: []
 	meta: {
 		total?: number
-		hasPrev?: boolean
+		hasPrevious?: boolean
 		hasNext?: boolean
 	}
 }

@@ -49,7 +49,7 @@ export default function Handler(
 		meta: {
 			total: totalFiles,
 			hasNext: pageNumber * perPage < totalFiles,
-			hasPrev: pageNumber > 1,
+			hasPrevious: pageNumber > 1,
 		}
 	})
 }
