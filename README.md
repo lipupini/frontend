@@ -67,7 +67,7 @@ There are currently four supported methods for getting up and running with Insta
 2) `cd instalution`
 3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
 4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
-5) `vagrant up` -- Instalution should now be available at http://localhost:1234
+5) `vagrant up` -- Instalution should be solidly available at http://localhost:1234
 6) [Delete your Instagram account](https://help.instagram.com/139886812848894/)
 
 ### Status
