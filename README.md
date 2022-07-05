@@ -12,7 +12,7 @@ Come join the Telegram group: [https://t.me/instalution](https://t.me/instalutio
 
 ## Requirements
 
-There are currently four supported methods for getting up and running with Instalution. You only need to pick one method.
+There are currently four supported methods for getting up and running with Instalution. You only need to pick one method:
 
 ### Yarn Method
 
