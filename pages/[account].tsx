@@ -81,9 +81,9 @@ const Home: NextPage = () => {
 							{autoHeight ? '🌐' : '⬜'}
 						</button>
 					</div>
-					{(media.meta.hasPrev || media.meta.hasNext) &&
+					{(media.meta.hasPrevious || media.meta.hasNext) &&
 						<div className="grow text-right">
-							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrev} title={t[locale].previous} className="p-5">
+							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrevious} title={t[locale].previous} className="p-5">
 								←
 							</button>
 						</div>
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
 							↑
 						</button>
 					</div>
-					{(media.meta.hasPrev || media.meta.hasNext) &&
+					{(media.meta.hasPrevious || media.meta.hasNext) &&
 						<div className="grow text-left">
 							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext} title={t[locale].next} className="p-5">
 								→
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
 						</a>
 					</div>
 				</div>
-				<div className="columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-0">
+				<div className="columns-3 md:columns-4 xl:columns-6 gap-0">
 					{media && media.data.map((filename: string) => (
 						<div key={filename} className="">
 							{/\.(jpg|webp)$/.test(filename) ?
