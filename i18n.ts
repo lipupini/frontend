@@ -51,4 +51,14 @@ export const translations: AppLocaleTranslation = {
 		layoutMode: 'Тип планировки',
 		language: 'Язык',
 	},
+	'cn': {
+		next: '下一页',
+		previous: '上一篇',
+		index: '索引',
+		about: '关于此软件的更多信息',
+		toggleLayout: '在方形和自动高度布局之间进行切换',
+		settings: '设置',
+		layoutMode: '视觉布局',
+		language: '语言',
+	},
 }
