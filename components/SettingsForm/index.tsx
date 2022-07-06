@@ -21,8 +21,8 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 						autoHeight: event.target.value === 'autoHeight'
 					}))
 				}}>
-				<option value="square">Square</option>
-				<option value="autoHeight">Auto-Height</option>
+				<option value="square">{t[locale].square}</option>
+				<option value="autoHeight">{t[locale].autoHeight}</option>
 			</select>
 		</div>
 	</div>
