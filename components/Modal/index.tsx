@@ -20,8 +20,8 @@ const Modal = ({openState, children}: ModalProps) => {
 
 	return open ?
 		<div id="modal-wrapper">
-				<div id="modal-overlay" className="bg-white opacity-[.4] absolute top-0 right-0 bottom-0 left-0" onClick={() => setOpen(false)}/>
-				<div id="modal" className="bg-[#27272A] p-10 absolute top-[50vh] left-[50vw] translate-x-[-50%] border-2 border-color-[#F4F4F5] min-w-[320px] drop-shadow-xl">
+				<div id="modal-overlay" className="bg-black opacity-[.92] absolute top-0 right-0 bottom-0 left-0" onClick={() => setOpen(false)}/>
+				<div id="modal" className="bg-[#27272A] p-10 absolute top-[50vh] left-[50vw] translate-x-[-50%] border-2 border-color-[#F4F4F4] min-w-[320px]" style={{filter: 'drop-shadow(0 0 0.75rem #F4F4F4)'}}>
 					{children}
 				</div>
 		</div> : <></>

@@ -11,8 +11,6 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 	}
 
 	return <div>
-		<h1 className="text-2xl font-bold mb-5">Settings</h1>
-
 		<div className="grid grid-cols-2">
 			<label>{t[locale].layoutMode}</label>
 			<select
