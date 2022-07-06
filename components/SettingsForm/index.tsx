@@ -14,9 +14,9 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 		<h1 className="text-2xl font-bold mb-5">Settings</h1>
 
 		<div className="grid grid-cols-2">
-			<label className="mb-5">{t[locale].layoutMode}</label>
+			<label>{t[locale].layoutMode}</label>
 			<select
-				className="mb-5" value={settings.autoHeight ? 'autoHeight' : 'square'}
+				value={settings.autoHeight ? 'autoHeight' : 'square'}
 				onChange={(event) => {
 					setSettings(prevState => ({
 						...prevState,
