@@ -1,9 +1,9 @@
 version: "2"
 services:
-  instalution:
+  frontend:
     tty: true
     image: "node:16"
-    container_name: instalution
+    container_name: frontend
     network_mode: "host"
     expose:
       - "1234"

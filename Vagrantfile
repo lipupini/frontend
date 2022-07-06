@@ -4,11 +4,11 @@ $provision = <<-SCRIPT
 	sudo apt update
 	sudo apt install -y yarn
 
-	cd /home/vagrant/instalution
+	cd /home/vagrant/frontend
 	yarn
 	yarn next telemetry disable
 	sudo yarn global add pm2
-	sudo pm2 start 'yarn dev --hostname 0.0.0.0' --name instalution
+	sudo pm2 start 'yarn dev --hostname 0.0.0.0' --name frontend
 	sudo pm2 startup
 SCRIPT
 
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 	# SSH login is --
 	# vagrant:vagrant
 	config.vm.box = "generic/ubuntu2104"
-	config.vm.synced_folder ".", "/home/vagrant/instalution"
+	config.vm.synced_folder ".", "/home/vagrant/frontend"
 	config.vm.network "forwarded_port", guest: 1234, host: 1234
 	config.vm.provision "shell", inline: $provision
 end
