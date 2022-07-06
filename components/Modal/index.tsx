@@ -10,7 +10,7 @@ const Modal = ({openState, children}: ModalProps) => {
 				setOpen(false)
 			}
 		})
-	}, [])
+	}, [setOpen])
 
 	useEffect(() => {
 		open ?
