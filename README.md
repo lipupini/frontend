@@ -2,7 +2,9 @@
 
 # Instalution
 
-Instalution aims to be a revolutionary solution to Instagram.
+## English Introduction
+
+_Instalution aims to be a revolutionary solution to Instagram._
 
 In search of like-minded individuals to start a development community:
 
@@ -12,74 +14,76 @@ In search of like-minded individuals to start a development community:
 
 Come join the Telegram group: [https://t.me/instalution](https://t.me/instalution)
 
-## Requirements
+Additional documentation: https://github.com/groovenectar/instalution/blob/master/README-en.md
 
-There are currently four supported methods for getting up and running with Instalution. You only need to pick one method:
+*Please note that at this time all translations are directly via DeepL Machine Translation.*
 
-### Yarn Method
+## 中文摘要
 
-- [Yarn](https://yarnpkg.com/)
+Instalution旨在成为Instagram的一个革命性的解决方案。
 
-### Docker Compose Method
+正在寻找志同道合的人，建立一个发展社区。
 
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+1) 愿意控制自己作品集的艺术家
+2) 有意贡献代码的开发者
+3) 对该项目有任何想法或见解的用户
 
-### Dockerfile Method
+快来加入Telegram组。[https://t.me/instalution](https://t.me/instalution)
 
-- [Docker](https://docs.docker.com/get-docker/)
+其他文件：https://github.com/groovenectar/instalution/blob/master/README-cn.md
 
-### Vagrant Method
+## Zusammenfassung auf Deutsch
 
-- [Vagrant](https://vagrantup.com/)
-- [VirtualBox](https://virtualbox.org/)
+_Instalution will eine revolutionäre Lösung für Instagram sein._
 
-## Installing Instalution
+Auf der Suche nach Gleichgesinnten, um eine Entwicklungsgemeinschaft zu gründen:
 
-### Option 1: Installing Instalution with Yarn
-1) `git clone https://github.com/groovenectar/instalution.git`
-2) `cd instalution`
-3) `yarn`
-4) `yarn next telemetry disable`
-5) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
-6) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
-7) `yarn dev` -- Instalution should now be available at http://localhost:1234
+1) Künstler, die die Kontrolle über ihre Portfolios übernehmen möchten
+2) Entwickler, die daran interessiert sind, Code beizusteuern
+3) Nutzer mit Ideen oder Einblicken in das Projekt
 
-### Option 2: Installing Instalution with Docker Compose
-1) `git clone https://github.com/groovenectar/instalution.git`
-2) `cd instalution`
-3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
-4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
-5) `docker-compose up` -- Instalution should now be available at http://localhost:1234
+Treten Sie der Telegram-Gruppe bei: [https://t.me/instalution](https://t.me/instalution)
 
-### Option 3: Installing Instalution with Dockerfile
+Zusätzliche Dokumentation: https://github.com/groovenectar/instalution/blob/master/README-de.md
 
-1) `git clone https://github.com/groovenectar/instalution.git`
-2) `cd instalution`
-3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
-4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
-5) `docker build --tag=frontend .`
-6) `docker run --volume=$(pwd):/home/node/app --publish 1234:1234 frontend` -- Instalution should now be available at http://localhost:1234
+## Resumen en español
 
-### Option 4: Installing Instalution with Vagrant
-1) `git clone https://github.com/groovenectar/instalution.git`
-2) `cd instalution`
-3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
-4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
-5) `vagrant up` -- Instalution should be available at http://localhost:1234
+_Instalution pretende ser una solución revolucionaria para Instagram._
 
-### Status
+En busca de personas con ideas afines para iniciar una comunidad de desarrollo:
 
-Instalution currently displays both images and video from the archive once extracted. It technically doesn't have to be an Instagram archive, you can put any media in the username folders.
+1) Artistas que quieran tomar el control de sus carteras
+2) Desarrolladores interesados en aportar código
+3) Usuarios con cualquier idea o visión sobre el proyecto
 
-A demo is probably available at [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
+Ven a unirte al grupo de Telegram: [https://t.me/instalution](https://t.me/instalution)
 
-Hopefully more soon :)
+Documentación adicional: https://github.com/groovenectar/instalution/blob/master/README-es.md
 
-If there should be a frontend with login to manage photos and videos, it could be a separate project and at the simplest form all it would require is a file manager fixed to usernames at `./public/accounts/[username]`. In fact, perhaps these could eventually optionally correspond to OS usernames (e.g. in `/home/` or `C:/Users/` etc).
+## Résumé en français
 
-### Short list of needs / TODOs
+_Instalution se veut une solution révolutionnaire pour Instagram._
 
-- Add infinite scroll paging option
+À la recherche de personnes partageant les mêmes idées pour lancer une communauté de développement :
 
-- Add filesystem cache for thumbnail generation
+1) Des artistes qui voudraient prendre le contrôle de leur portfolio.
+2) Développeurs intéressés à contribuer au code
+3) Utilisateurs ayant des idées ou des points de vue sur le projet.
+
+Venez rejoindre le groupe Telegram : [https://t.me/instalution](https://t.me/instalution)
+
+Documentation supplémentaire : https://github.com/groovenectar/instalution/blob/master/README-fr.md
+
+## Резюме на русском языке
+
+_Instalution стремится стать революционным решением для Instagram._
+
+В поисках единомышленников для создания сообщества разработчиков:
+
+1) Художники, которые хотели бы взять под контроль свои портфолио
+2) Разработчики, заинтересованные в создании кода
+3) Пользователи с любыми идеями или соображениями по проекту.
+
+Присоединяйтесь к группе Telegram: [https://t.me/instalution](https://t.me/instalution)
+
+Дополнительная документация: https://github.com/groovenectar/instalution/blob/master/README-ru.md
