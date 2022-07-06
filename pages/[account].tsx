@@ -5,25 +5,30 @@ import getConfig from 'next/config'
 import { useRouter } from 'next/router'
 import { AppApiResponse } from '../types'
 import { translations as t } from '../i18n'
+import Modal from '../components/Modal'
+import SettingsForm from '../components/SettingsForm'
+import { Settings } from '../types'
 
 const Home: NextPage = () => {
 	const router = useRouter()
-	const { locale } = useRouter()
 
+	const { locale } = useRouter()
 	if (!locale) {
 		throw new Error('Could not determine locale')
 	}
 
 	const { account } = router.query
 
-	const {publicRuntimeConfig} = getConfig()
-	const [page, setPage] = useState<number>(1)
-	const [media, setMedia] = useState<AppApiResponse>({
+	const { publicRuntimeConfig } = getConfig()
+	const [ settingsModalOpen, setSettingsModalOpen ] = useState<boolean>(false)
+	const [ settings, setSettings ] = useState<Settings>({
+		autoHeight: false,
+	})
+	const [ page, setPage ] = useState<number>(1)
+	const [ media, setMedia ] = useState<AppApiResponse>({
 		data: [],
 		meta: {},
 	})
-
-	const [ autoHeight, setAutoHeight ] = useState<boolean>(false)
 
 	useEffect(() => {
 		if (!account) {
@@ -77,8 +82,8 @@ const Home: NextPage = () => {
 			<main>
 				<div className="p-5 flex">
 					<div className="grow-0">
-						<button onClick={() => setAutoHeight(prevState => !prevState)} title={t[locale].toggleLayout} className="p-5">
-							{autoHeight ? '🌐' : '⬜'}
+						<button onClick={() => setSettingsModalOpen(true)} title={t[locale].settings} className="p-5">
+							⚙
 						</button>
 					</div>
 					{(media.meta.hasPrevious || media.meta.hasNext) &&
@@ -110,7 +115,7 @@ const Home: NextPage = () => {
 					{media && media.data.map((filename: string) => (
 						<div key={filename} className="">
 							{/\.(jpg|webp)$/.test(filename) ?
-								autoHeight ?
+								settings.autoHeight ?
 									imageMarkup.autoHeight(filename) : imageMarkup.squareBackground(filename)
 								: (
 									<video controls className="w-full aspect-square" preload="metadata" loop>
@@ -121,6 +126,9 @@ const Home: NextPage = () => {
 					))}
 				</div>
 			</main>
+			<Modal openState={[ settingsModalOpen, setSettingsModalOpen ]}>
+				<SettingsForm settingsState={[ settings, setSettings ]} />
+			</Modal>
 		</div>
 	)
 }
