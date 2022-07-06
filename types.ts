@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface AppApiResponse {
 	data: []
 	meta: {
@@ -9,4 +11,23 @@ export interface AppApiResponse {
 
 export interface AppLocaleTranslation {
 	[index: string]: { [index: string]: string }
+}
+
+export interface ModalProps {
+	openState: [
+		boolean,
+		Dispatch<SetStateAction<boolean>>
+	]
+	children: JSX.Element
+}
+
+export interface Settings {
+	autoHeight: boolean
+}
+
+export interface SettingsFormProps {
+	settingsState: [
+		Settings,
+		Dispatch<SetStateAction<Settings>>
+	]
 }
