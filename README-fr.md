@@ -37,7 +37,7 @@ Il y a actuellement quatre méthodes pour démarrer avec Instalution. Vous ne de
 ## Installation d'Instalution
 
 ### Option 1 : Installer Instalution avec Yarn
-1) `git clone https://github.com/groovenectar/instalution.git`
+1) `git clone https://github.com/instalution/frontend.git`
 2) `cd instalution`
 3) `yarn`
 4) `yarn next telemetry disable` (en anglais)
@@ -46,7 +46,7 @@ Il y a actuellement quatre méthodes pour démarrer avec Instalution. Vous ne de
 7) `yarn dev` -- Instalution devrait maintenant être disponible à l'adresse http://localhost:1234.
 
 ### Option 2 : Installer Instalution avec Docker Compose
-1) `git clone https://github.com/groovenectar/instalution.git`
+1) `git clone https://github.com/instalution/frontend.git`
 2) `cd instalution`
 3) [Téléchargez une archive](https://help.instagram.com/181231772500920) de vos données depuis Instagram
 4) Extrayez le contenu du répertoire `media/posts/` dans l'archive vers `./public/accounts/[archive_folder_name]`. Le nom du dossier de base deviendra le nom d'utilisateur, et Instalution lira chaque image et vidéo dans chaque sous-dossier.
@@ -54,7 +54,7 @@ Il y a actuellement quatre méthodes pour démarrer avec Instalution. Vous ne de
 
 ### Option 3 : Installer Instalution avec Dockerfile
 
-1) `git clone https://github.com/groovenectar/instalution.git`
+1) `git clone https://github.com/instalution/frontend.git`
 2) `cd instalution`
 3) [Télécharger une archive](https://help.instagram.com/181231772500920) de vos données depuis Instagram
 4) Extrayez le contenu du répertoire `media/posts/` dans l'archive vers `./public/accounts/[archive_folder_name]`. Le nom du dossier de base deviendra le nom d'utilisateur, et Instalution lira chaque image et vidéo dans chaque sous-dossier.
@@ -62,7 +62,7 @@ Il y a actuellement quatre méthodes pour démarrer avec Instalution. Vous ne de
 6) `docker run --volume=$(pwd):/home/node/app --publish 1234:1234 frontend` -- Instalution devrait maintenant être disponible à l'adresse http://localhost:1234.
 
 ### Option 4 : Installer Instalution avec Vagrant
-1) `git clone https://github.com/groovenectar/instalution.git`
+1) `git clone https://github.com/instalution/frontend.git`
 2) `cd instalution`
 3) [Télécharger une archive](https://help.instagram.com/181231772500920) de vos données depuis Instagram
 4) Extrayez le contenu du répertoire `media/posts/` dans l'archive vers `./public/accounts/[archive_folder_name]`. Le nom du dossier de base deviendra le nom d'utilisateur, et Instalution lira chaque image et vidéo dans chaque sous-dossier.

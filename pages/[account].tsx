@@ -106,7 +106,7 @@ const Home: NextPage = () => {
 						</div>
 					}
 					<div className="grow-0">
-						<a href="https://github.com/groovenectar/instalution" target="_blank" rel="noreferrer noopener" title={t[locale].about} className="p-5 block">
+						<a href="https://github.com/instalution/frontend" target="_blank" rel="noreferrer noopener" title={t[locale].about} className="p-5 block">
 							?
 						</a>
 					</div>

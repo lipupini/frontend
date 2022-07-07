@@ -14,7 +14,7 @@ In search of like-minded individuals to start a development community:
 
 Come join the Telegram group: [https://t.me/instalution](https://t.me/instalution)
 
-Additional documentation: https://github.com/groovenectar/instalution/blob/master/README-en.md
+Additional documentation: https://github.com/instalution/frontend/blob/master/README-en.md
 
 *Please note that at this time all translations are directly via DeepL Machine Translation.*
 
@@ -30,7 +30,7 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 
 快来加入Telegram组。[https://t.me/instalution](https://t.me/instalution)
 
-其他文件：https://github.com/groovenectar/instalution/blob/master/README-cn.md
+其他文件：https://github.com/instalution/frontend/blob/master/README-cn.md
 
 ## Zusammenfassung auf Deutsch
 
@@ -44,7 +44,7 @@ Auf der Suche nach Gleichgesinnten, um eine Entwicklungsgemeinschaft zu gründen
 
 Treten Sie der Telegram-Gruppe bei: [https://t.me/instalution](https://t.me/instalution)
 
-Zusätzliche Dokumentation: https://github.com/groovenectar/instalution/blob/master/README-de.md
+Zusätzliche Dokumentation: https://github.com/instalution/frontend/blob/master/README-de.md
 
 ## Resumen en español
 
@@ -58,7 +58,7 @@ En busca de personas con ideas afines para iniciar una comunidad de desarrollo:
 
 Ven a unirte al grupo de Telegram: [https://t.me/instalution](https://t.me/instalution)
 
-Documentación adicional: https://github.com/groovenectar/instalution/blob/master/README-es.md
+Documentación adicional: https://github.com/instalution/frontend/blob/master/README-es.md
 
 ## Résumé en français
 
@@ -72,7 +72,7 @@ _Instalution se veut une solution révolutionnaire pour Instagram._
 
 Venez rejoindre le groupe Telegram : [https://t.me/instalution](https://t.me/instalution)
 
-Documentation supplémentaire : https://github.com/groovenectar/instalution/blob/master/README-fr.md
+Documentation supplémentaire : https://github.com/instalution/frontend/blob/master/README-fr.md
 
 ## Резюме на русском языке
 
@@ -86,4 +86,4 @@ _Instalution стремится стать революционным решен
 
 Присоединяйтесь к группе Telegram: [https://t.me/instalution](https://t.me/instalution)
 
-Дополнительная документация: https://github.com/groovenectar/instalution/blob/master/README-ru.md
+Дополнительная документация: https://github.com/instalution/frontend/blob/master/README-ru.md
