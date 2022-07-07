@@ -23,6 +23,7 @@ export interface ModalProps {
 
 export interface Settings {
 	autoHeight: boolean
+	sort: string
 }
 
 export interface SettingsFormProps {

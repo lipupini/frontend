@@ -17,11 +17,20 @@ export default function Handler(
 	res: NextApiResponse<AppApiResponse>
 ) {
 	const {serverRuntimeConfig} = useConfig()
-	const query = req.query;
-	const { account, page } = query;
+	const query = req.query
+	// `account` should be present because it's defined in the route
+	const { account, page, sort } = query
 	const pageNumber: number = parseInt(page as string)
 
-	if (!pageNumber) {
+	if (!sort) {
+		throw new Error('No sort specified')
+	}
+
+	if (!['random', 'notRandom'].includes(sort.toString())) {
+		throw new Error('Unexpected value for sort')
+	}
+
+	if (!pageNumber || pageNumber < 1) {
 		throw new Error('No page specified')
 	}
 
@@ -42,6 +51,11 @@ export default function Handler(
 
 	if (files.length > perPage) {
 		files = files.slice((pageNumber - 1) * perPage, perPage * pageNumber)
+	}
+
+	if (sort === 'random') {
+		// Nice @ https://stackoverflow.com/a/56464683
+		files = files.sort(() => (Math.random() > 0.5) ? 1 : -1)
 	}
 
 	res.status(200).json({
