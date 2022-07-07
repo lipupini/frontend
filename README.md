@@ -14,7 +14,11 @@ In search of like-minded individuals to start a development community:
 2) Developers interested in contributing code
 3) Users with any ideas or insights on the project
 
-Come join the Telegram group: [https://t.me/instalution](https://t.me/instalution)
+You are invited to join one of the groups:
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 Additional documentation: https://github.com/instalution/frontend/blob/master/README-en.md
 
@@ -30,7 +34,11 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 2) 有意贡献代码的开发者
 3) 对该项目有任何想法或见解的用户
 
-快来加入Telegram组。[https://t.me/instalution](https://t.me/instalution)
+我们邀请你加入其中一个小组。
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 其他文件：https://github.com/instalution/frontend/blob/master/README-cn.md
 
@@ -44,7 +52,11 @@ Auf der Suche nach Gleichgesinnten, um eine Entwicklungsgemeinschaft zu gründen
 2) Entwickler, die daran interessiert sind, Code beizusteuern
 3) Nutzer mit Ideen oder Einblicken in das Projekt
 
-Treten Sie der Telegram-Gruppe bei: [https://t.me/instalution](https://t.me/instalution)
+Sie sind eingeladen, sich einer der Gruppen anzuschließen:
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 Zusätzliche Dokumentation: https://github.com/instalution/frontend/blob/master/README-de.md
 
@@ -58,7 +70,11 @@ En busca de personas con ideas afines para iniciar una comunidad de desarrollo:
 2) Desarrolladores interesados en aportar código
 3) Usuarios con cualquier idea o visión sobre el proyecto
 
-Ven a unirte al grupo de Telegram: [https://t.me/instalution](https://t.me/instalution)
+Le invitamos a unirse a uno de los grupos:
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 Documentación adicional: https://github.com/instalution/frontend/blob/master/README-es.md
 
@@ -72,7 +88,11 @@ _Instalution se veut une solution révolutionnaire pour Instagram._
 2) Développeurs intéressés à contribuer au code
 3) Utilisateurs ayant des idées ou des points de vue sur le projet.
 
-Venez rejoindre le groupe Telegram : [https://t.me/instalution](https://t.me/instalution)
+Vous êtes invité à vous joindre à l'un de ces groupes :
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 Documentation supplémentaire : https://github.com/instalution/frontend/blob/master/README-fr.md
 
@@ -87,5 +107,11 @@ _Instalution стремится стать революционным решен
 3) Пользователи с любыми идеями или соображениями по проекту.
 
 Присоединяйтесь к группе Telegram: [https://t.me/instalution](https://t.me/instalution)
+
+Приглашаем вас присоединиться к одной из групп:
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 Дополнительная документация: https://github.com/instalution/frontend/blob/master/README-ru.md
