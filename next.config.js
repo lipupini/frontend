@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const locales = ['en', 'fr', 'es', 'de', 'ru', 'cn']
+const locales = ['en', 'fr', 'es', 'de', 'ru', 'cn', 'kr', 'jp']
 
 const nextConfig = {
 	reactStrictMode: true,

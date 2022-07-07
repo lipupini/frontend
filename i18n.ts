@@ -67,4 +67,26 @@ export const translations: AppLocaleTranslation = {
 		square: '方形',
 		autoHeight: '可变高度',
 	},
+	'kr': {
+		next: '다음',
+		previous: '이전',
+		index: '색인',
+		about: '이 소프트웨어에 대한 추가 정보',
+		settings: '설정',
+		layoutMode: '시각적 레이아웃',
+		language: '언어',
+		square: '광장',
+		autoHeight: '가변 높이',
+	},
+	'jp': {
+		next: '次のページ',
+		previous: '前',
+		index: 'インデックス',
+		about: '本ソフトウェアの詳細について',
+		settings: '設定',
+		layoutMode: 'ビジュアルレイアウト',
+		language: '言語',
+		square: '正方形',
+		autoHeight: 'バリアブルハイト',
+	}
 }
