@@ -1,8 +1,8 @@
 import { translations as t } from '../../i18n'
 import { useRouter } from 'next/router'
 import { SettingsFormProps } from '../../types'
-import getConfig from "next/config";
-import Link from "next/link";
+import getConfig from 'next/config'
+import Link from 'next/link'
 
 export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 	const { locale } = useRouter()
