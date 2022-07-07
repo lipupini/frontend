@@ -10,7 +10,11 @@ In search of like-minded individuals to start a development community:
 2) Developers interested in contributing code
 3) Users with any ideas or insights on the project
 
-Come join the Telegram group: [https://t.me/instalution](https://t.me/instalution)
+You are invited to join one of the groups:
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 ## Requirements
 

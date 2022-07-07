@@ -10,7 +10,11 @@ A la recherche de personnes partageant les mêmes idées pour démarrer une comm
 2) Développeurs intéressés à contribuer au code
 3) Utilisateurs ayant des idées ou des points de vue sur le projet.
 
-Venez rejoindre le groupe Telegram : [https://t.me/instalution](https://t.me/instalution)
+Vous êtes invité à vous joindre à l'un de ces groupes :
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 ## Exigences
 

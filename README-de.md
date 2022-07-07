@@ -10,7 +10,11 @@ Wir sind auf der Suche nach Gleichgesinnten, um eine Entwicklungsgemeinschaft zu
 2) Entwickler, die daran interessiert sind, Code beizusteuern
 3) Nutzer mit Ideen oder Einblicken in das Projekt
 
-Treten Sie der Telegram-Gruppe bei: [https://t.me/instalution](https://t.me/instalution)
+Sie sind eingeladen, sich einer der Gruppen anzuschließen:
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 ## Anforderungen
 

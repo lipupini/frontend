@@ -10,7 +10,11 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 2) 对贡献代码感兴趣的开发者
 3) 对该项目有任何想法或见解的用户
 
-快来加入Telegram组。[https://t.me/instalution](https://t.me/instalution)
+我们邀请你加入其中一个小组。
+
+- Matrix @ #instalution:catgirl.cloud
+- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
+- [Telegram](https://t.me/instalution)
 
 ## 要求
 
