@@ -23,6 +23,7 @@ const Home: NextPage = () => {
 	const [ settingsModalOpen, setSettingsModalOpen ] = useState<boolean>(false)
 	const [ settings, setSettings ] = useState<Settings>({
 		autoHeight: false,
+		sort: 'random'
 	})
 	const [ page, setPage ] = useState<number>(1)
 	const [ media, setMedia ] = useState<AppApiResponse>({
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
 			return
 		}
 
-		fetch('/api/files?account=' + account + '&page=' + page, {
+		fetch('/api/files?account=' + account + '&page=' + page + '&sort=' + settings.sort, {
 			method: 'GET',
 			headers: { 'Content-type': 'application/json' },
 		})
@@ -48,7 +49,7 @@ const Home: NextPage = () => {
 					console.log(error)
 				}
 			);
-	}, [account, page])
+	}, [account, page, settings.sort])
 
 	const imageMarkup = {
 		autoHeight: ((filename: string) => (
