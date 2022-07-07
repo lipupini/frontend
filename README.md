@@ -2,6 +2,8 @@
 
 # Instalution
 
+![Playwright Workflow](https://github.com/instalution/frontend/actions/workflows/playwright.yml/badge.svg)
+
 ## English Introduction
 
 _Instalution aims to be a revolutionary solution to Instagram._
