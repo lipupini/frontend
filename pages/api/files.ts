@@ -26,7 +26,7 @@ export default function Handler(
 		throw new Error('No sort specified')
 	}
 
-	if (!['random', 'notRandom'].includes(sort.toString())) {
+	if (!['random', 'filename'].includes(sort.toString())) {
 		throw new Error('Unexpected value for sort')
 	}
 

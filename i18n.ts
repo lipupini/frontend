@@ -12,8 +12,8 @@ export const translations: AppLocaleTranslation = {
 		square: 'Square',
 		autoHeight: 'Auto-height',
 		sort: 'Sort',
-		random: 'Random (RNG) -- RNG is not ideal',
-		notRandom: 'Default sort order needs attention at some point',
+		random: 'Random (RNG)',
+		filename: 'Filename',
 	},
 	'fr': {
 		next: 'Suivant',
@@ -26,8 +26,8 @@ export const translations: AppLocaleTranslation = {
 		square: 'Carré',
 		autoHeight: 'Hauteur variable',
 		sort: 'Trier',
-		random: 'Random (RNG) -- Le RNG n\'est pas idéal',
-		notRandom: 'L\'ordre de tri par défaut nécessite une attention particulière à un moment donné',
+		random: 'Random (RNG)',
+		filename: 'Nom de fichier',
 	},
 	'es': {
 		next: 'Siguiente',
@@ -40,8 +40,8 @@ export const translations: AppLocaleTranslation = {
 		square: 'Cuadrado',
 		autoHeight: 'Altura variable',
 		sort: 'Ordenar',
-		random: 'Al azar (RNG) -- El RNG no es ideal',
-		notRandom: 'El orden de clasificación por defecto necesita atención en algún momento',
+		random: 'Al azar (RNG)',
+		filename: 'Archivo',
 	},
 	'de': {
 		next: 'Weiter',
@@ -54,8 +54,8 @@ export const translations: AppLocaleTranslation = {
 		square: 'Platz',
 		autoHeight: 'Variable Höhe',
 		sort: 'Sortieren',
-		random: 'Zufällig (RNG) -- RNG ist nicht ideal',
-		notRandom: 'Voreingestellte Sortierreihenfolge muss irgendwann überarbeitet werden',
+		random: 'Zufällig (RNG)',
+		filename: 'Dateiname',
 	},
 	'ru': {
 		next: 'Следующий',
@@ -68,8 +68,8 @@ export const translations: AppLocaleTranslation = {
 		square: 'Квадрат',
 		autoHeight: 'Автоматическая высота',
 		sort: 'Сортировать',
-		random: 'Случайный (RNG) -- RNG не идеален',
-		notRandom: 'Порядок сортировки по умолчанию требует внимания на определенном этапе',
+		random: 'Случайный (RNG)',
+		filename: 'Имя файла',
 	},
 	'cn': {
 		next: '下一页',
@@ -82,8 +82,8 @@ export const translations: AppLocaleTranslation = {
 		square: '方形',
 		autoHeight: '可变高度',
 		sort: '分类',
-		random: '随机 (RNG) -- RNG并不理想',
-		notRandom: '默认的排序顺序在某些方面需要注意',
+		random: '随机 (RNG)',
+		filename: '文件名',
 	},
 	'kr': {
 		next: '다음',
@@ -96,8 +96,8 @@ export const translations: AppLocaleTranslation = {
 		square: '광장',
 		autoHeight: '가변 높이',
 		sort: '정렬',
-		random: '인기 동영상 (RNG) -- RNG적합하지 않다',
-		notRandom: '기본 정렬 순서는 어떤 점에서주의가 필요합니다',
+		random: '인기 동영상 (RNG)',
+		filename: '파일 이름',
 	},
 	'jp': {
 		next: '次のページ',
@@ -110,7 +110,7 @@ export const translations: AppLocaleTranslation = {
 		square: '正方形',
 		autoHeight: 'バリアブルハイト',
 		sort: 'ソート',
-		random: 'ランダム (RNG) -- RNGは理想的ではない',
-		notRandom: 'デフォルトのソート順は、ある時点で注意が必要',
+		random: 'ランダム (RNG)',
+		filename: 'ファイル名',
 	}
 }

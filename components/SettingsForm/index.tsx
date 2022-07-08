@@ -28,7 +28,7 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 				className="border p-1 max-w-[225px]"
 			>
 				<option value="random">{t[locale].random}</option>
-				<option value="notRandom">{t[locale].notRandom}</option>
+				<option value="filename">{t[locale].filename}</option>
 			</select>
 		</div>
 		<div className="mb-4">
