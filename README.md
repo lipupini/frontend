@@ -114,7 +114,7 @@ Instalutionは、Instagramの革命的なソリューションを目指してい
 
 追加ドキュメント: https://github.com/instalution/frontend/blob/master/README-jp.md
 
-##한국어 요약
+## 한국어 요약
 
 설치는 인스 타 그램에 혁신적인 솔루션이 될 것을 목표로하고있다..
 
