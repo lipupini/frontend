@@ -184,7 +184,7 @@ const Home: NextPage = () => {
 							</button>
 						</div>
 					}
-					<div>
+					<div className="about">
 						<button onClick={() => window.open('https://github.com/instalution/frontend')} title={t[locale].about}>
 							?
 						</button>
