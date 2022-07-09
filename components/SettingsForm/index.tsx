@@ -59,9 +59,9 @@ export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
 				<option value="columns">{t[locale].column}</option>
 			</select>
 		</div>
-		{/*<div className="form-input-label">
+		<div className="form-input-label">
 			<label>{t[locale].columnCount}</label>
-			<div className="input-grid text-center">
+			<div className="input-grid text-center gap">
 				<div>
 					<input type="number" min="1" />
 				</div>
@@ -72,7 +72,7 @@ export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
 					<input type="number" min="1" />
 				</div>
 			</div>
-		</div>*/}
+		</div>
 		<div>
 			<label>{t[locale].language}</label>
 			<div className="input-grid text-center gap">
