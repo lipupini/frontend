@@ -103,8 +103,13 @@ button {
 		width: 100%;
 	}
 
-	video {
+	// Needed to style an outer div to prevent a gap
+	div.video {
+		overflow: hidden;
 		aspect-ratio: 1 / 1;
+	}
+
+	video {
 		width: 100%;
 	}
 }
