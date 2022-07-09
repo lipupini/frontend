@@ -49,4 +49,5 @@ export interface PaginationProps {
 	meta: AppApiResponseMeta
 	pageState: PageState
 	locale: string
+	location: 'header' | 'footer'
 }
