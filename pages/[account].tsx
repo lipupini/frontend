@@ -160,7 +160,7 @@ const Home: NextPage = () => {
 
 			<main>
 				<div id="app-bar">
-					<div>
+					<div id="button-container-settings">
 						<button onClick={() => setSettingsModalOpen(true)} title={t[locale].settings}>
 							⚙
 						</button>
