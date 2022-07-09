@@ -1,0 +1,143 @@
+$dark: #2d2d2d;
+$light: #bfbfbf;
+$spacing: 1.5rem;
+
+body, select, button, a {
+	background-color: $dark;
+	color: $light;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+ul {
+	list-style: none;
+	padding: $spacing $spacing * 2;
+}
+
+li {
+	margin-bottom: $spacing / 2;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+
+	&.modal-open {
+		overflow: hidden;
+	}
+}
+
+select {
+	padding: $spacing / 2;
+}
+
+label {
+	font-size: 110%;
+	font-weight: bold;
+	display: block;
+}
+
+button[disabled] {
+	opacity: .2;
+}
+
+#app-bar {
+	display: flex;
+	padding: $spacing;
+
+	> div {
+		flex-grow: 1;
+
+		:first-of-type, :last-of-type {
+			flex-grow: 0;
+		}
+	}
+
+	.index {
+		text-align: center;
+	}
+
+	.next {
+		text-align: left;
+	}
+
+	.previous {
+		text-align: right;
+	}
+}
+
+button {
+	padding: $spacing;
+	border: none;
+	cursor: pointer;
+}
+
+#media-container {
+	gap: 0;
+
+	&.grid {
+		display: grid;
+	}
+
+	&.square {
+		a > div {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+		img {
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	video {
+		aspect-ratio: 1 / 1;
+		width: 100%;
+	}
+}
+
+#modal-overlay {
+	background-color: $dark;
+	opacity: 0.85;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#modal {
+	background-color: #27272A;
+	padding: $spacing;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px dotted $light;
+	border-radius: 3px;
+	min-width: 320px;
+
+	label {
+		margin-bottom: $spacing / 2;
+	}
+
+	.form-input-label {
+		margin-bottom: $spacing;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

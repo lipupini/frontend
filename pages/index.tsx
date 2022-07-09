@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main>
-				<ul className="p-10">
+				<ul>
 					{accounts ? accounts.data.map((account: string) => (
 						<li key={account}><Link href={'/' + account}>{account}</Link></li>
 					)) : <li>No accounts loaded</li>}

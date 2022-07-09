@@ -1,5 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
+export type Breakpoint = 'small' | 'medium' | 'large'
+
 export interface AppApiResponse {
 	data: []
 	meta: {
@@ -24,6 +26,8 @@ export interface ModalProps {
 export interface Settings {
 	autoHeight: boolean
 	sort: string
+	columnBreakpoints: {[index in Breakpoint]: number}
+	renderingMode: 'grid' | 'columns'
 }
 
 export interface SettingsFormProps {

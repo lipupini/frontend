@@ -14,14 +14,14 @@ const Modal = ({openState, children}: ModalProps) => {
 
 	useEffect(() => {
 		open ?
-			document.querySelector('body')?.classList.add('overflow-hidden') :
-			document.querySelector('body')?.classList.remove('overflow-hidden')
+			document.querySelector('body')?.classList.add('modal-open') :
+			document.querySelector('body')?.classList.remove('modal-open')
 	}, [open])
 
 	return open ?
 		<div id="modal-wrapper">
-				<div id="modal-overlay" className="bg-black opacity-[.92] absolute top-0 right-0 bottom-0 left-0" onClick={() => setOpen(false)}/>
-				<div id="modal" className="bg-[#27272A] p-4 md:p-10 absolute top-[50vh] left-[50vw] translate-x-[-50%] border-2 border-color-[#F4F4F4] min-w-[320px]">
+				<div id="modal-overlay" onClick={() => setOpen(false)}/>
+				<div id="modal">
 					{children}
 				</div>
 		</div> : <></>

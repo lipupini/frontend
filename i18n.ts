@@ -7,13 +7,16 @@ export const translations: AppLocaleTranslation = {
 		index: 'Index',
 		about: 'More information about this software',
 		settings: 'Settings',
-		layoutMode: 'Layout Mode',
+		layoutMode: 'Layout mode',
 		language: 'Language',
 		square: 'Square',
 		autoHeight: 'Auto-height',
 		sort: 'Sort',
 		random: 'Random (RNG)',
 		filename: 'Filename',
+		renderingMode: 'Render mode',
+		column: 'Columns (Top to bottom)',
+		grid: 'Grid (Left to right)',
 	},
 	'fr': {
 		next: 'Suivant',
@@ -28,6 +31,9 @@ export const translations: AppLocaleTranslation = {
 		sort: 'Trier',
 		random: 'Random (RNG)',
 		filename: 'Nom de fichier',
+		renderingMode: 'Mode de rendu',
+		column: 'Colonnes (de haut en bas)',
+		grid: 'Grille (de gauche à droite)',
 	},
 	'es': {
 		next: 'Siguiente',
@@ -42,6 +48,9 @@ export const translations: AppLocaleTranslation = {
 		sort: 'Ordenar',
 		random: 'Al azar (RNG)',
 		filename: 'Archivo',
+		renderingMode: 'Modo de renderización',
+		column: 'Columnas (de arriba a abajo)',
+		grid: 'Rejilla (de izquierda a derecha)',
 	},
 	'de': {
 		next: 'Weiter',
@@ -56,6 +65,9 @@ export const translations: AppLocaleTranslation = {
 		sort: 'Sortieren',
 		random: 'Zufällig (RNG)',
 		filename: 'Dateiname',
+		renderingMode: 'Rendermodus',
+		column: 'Säulen (von oben nach unten)',
+		grid: 'Raster (von links nach rechts)',
 	},
 	'ru': {
 		next: 'Следующий',
@@ -70,6 +82,9 @@ export const translations: AppLocaleTranslation = {
 		sort: 'Сортировать',
 		random: 'Случайный (RNG)',
 		filename: 'Имя файла',
+		renderingMode: 'Режим рендеринга',
+		column: 'Колонки (сверху вниз)',
+		grid: 'Сетка (слева направо)',
 	},
 	'cn': {
 		next: '下一页',
@@ -84,6 +99,9 @@ export const translations: AppLocaleTranslation = {
 		sort: '分类',
 		random: '随机 (RNG)',
 		filename: '文件名',
+		renderingMode: '渲染模式',
+		column: '栏目（从上到下）',
+		grid: '网格（从左到右）',
 	},
 	'kr': {
 		next: '다음',
@@ -98,6 +116,9 @@ export const translations: AppLocaleTranslation = {
 		sort: '정렬',
 		random: '인기 동영상 (RNG)',
 		filename: '파일 이름',
+		renderingMode: '렌더링 모드',
+		column: '열(위에서 아래로)',
+		grid: '그리드(왼쪽에서 오른쪽으로)',
 	},
 	'jp': {
 		next: '次のページ',
@@ -112,5 +133,8 @@ export const translations: AppLocaleTranslation = {
 		sort: 'ソート',
 		random: 'ランダム (RNG)',
 		filename: 'ファイル名',
+		renderingMode: 'レンダリングモード',
+		column: 'コラム（上から下へ）',
+		grid: 'グリッド（左から右へ）',
 	}
 }
