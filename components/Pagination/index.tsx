@@ -2,7 +2,7 @@ import { translations as t } from '../../i18n'
 import { PaginationProps } from '../../types'
 import { useRouter } from 'next/router'
 
-const Pagination = ({ meta, pageState, locale }: PaginationProps) => {
+const Pagination = ({ meta, pageState, locale, location }: PaginationProps) => {
 	const { setPage } = pageState
 	const router = useRouter()
 
@@ -16,7 +16,7 @@ const Pagination = ({ meta, pageState, locale }: PaginationProps) => {
 		}
 		<div className="index">
 			<button onClick={() => router.push('/')} title={t[locale].index}>
-				↑
+				{ location === 'header' && '↑' }
 			</button>
 		</div>
 		{(meta.hasPrevious || meta.hasNext) &&

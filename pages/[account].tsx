@@ -165,7 +165,7 @@ const Home: NextPage = () => {
 							⚙
 						</button>
 					</div>
-					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} />
+					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} location="header" />
 					<div className="about">
 						<button onClick={() => window.open('https://github.com/instalution/frontend')} title={t[locale].about}>
 							?
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
 					))}
 				</div>
 				<footer className="app-bar">
-					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} />
+					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} location="footer" />
 				</footer>
 			</main>
 			<Modal openState={[ settingsModalOpen, setSettingsModalOpen ]}>
