@@ -197,9 +197,11 @@ const Home: NextPage = () => {
 								settings.autoHeight ?
 									imageMarkup.autoHeight(filename) : imageMarkup.squareBackground(filename)
 								: (
-									<video controls preload="metadata" loop>
-										<source src={`${filename}#t=0.5`} type="video/mp4" />
-									</video>
+									<div className="video">
+										<video controls preload="metadata" loop>
+											<source src={`${filename}#t=0.5`} type="video/mp4" />
+										</video>
+									</div>
 								)}
 						</div>
 					))}
