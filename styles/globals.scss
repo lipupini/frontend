@@ -117,7 +117,8 @@ button {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 
-	> *:last-child:nth-child(2n - 1) {
+	// This is to center-align an uneven last column
+	#settings-form & > *:last-child:nth-child(2n - 1) {
 		grid-column-end: -2;
 		transform: translateX(calc(-50% - 0.375rem));
 	}
