@@ -116,6 +116,11 @@ button {
 .input-grid {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
+
+	> *:last-child:nth-child(2n - 1) {
+		grid-column-end: -2;
+		transform: translateX(calc(-50% - 0.375rem));
+	}
 }
 
 .gap {

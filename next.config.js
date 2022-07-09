@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const locales = ['en', 'fr', 'es', 'de', 'ru', 'cn', 'kr', 'jp']
+const locales = ['en', 'fr', 'es', 'de', 'ru', 'cn', 'kr', 'jp', 'ei']
 
 const nextConfig = {
 	publicRuntimeConfig: {
@@ -17,7 +17,7 @@ const nextConfig = {
 	},
 	i18n: {
 		locales,
-		defaultLocale: 'en',
+		defaultLocale: 'ei',
 	},
 	reactStrictMode: true,
 }
