@@ -13,7 +13,7 @@ export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
 		throw new Error('Could not determine locale')
 	}
 
-	return <>
+	return <div id="settings-form">
 		<div className="form-input-label">
 			<label>{t[locale].sort}</label>
 			<select
@@ -83,7 +83,7 @@ export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
 				)}
 			</div>
 		</div>
-	</>
+	</div>
 }
 
 export default SettingsForm
