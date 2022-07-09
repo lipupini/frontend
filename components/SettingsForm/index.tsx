@@ -15,8 +15,8 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 	}
 
 	return <>
-		<div className="mb-4">
-			<label className="block font-bold mb-1">{t[locale].sort}</label>
+		<div className="form-input-label">
+			<label>{t[locale].sort}</label>
 			<select
 				value={settings.sort}
 				onChange={(event) => {
@@ -25,14 +25,13 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 						sort: event.target.value
 					}))
 				}}
-				className="border p-1 max-w-[225px]"
 			>
 				<option value="random">{t[locale].random}</option>
 				<option value="filename">{t[locale].filename}</option>
 			</select>
 		</div>
-		<div className="mb-4">
-			<label className="block font-bold mb-1">{t[locale].layoutMode}</label>
+		<div className="form-input-label">
+			<label>{t[locale].layoutMode}</label>
 			<select
 				value={settings.autoHeight ? 'autoHeight' : 'square'}
 				onChange={(event) => {
@@ -41,17 +40,31 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 						autoHeight: event.target.value === 'autoHeight'
 					}))
 				}}
-				className="border p-1"
 			>
 				<option value="square">{t[locale].square}</option>
 				<option value="autoHeight">{t[locale].autoHeight}</option>
 			</select>
 		</div>
+		<div className="form-input-label">
+			<label>{t[locale].renderingMode}</label>
+			<select
+				value={settings.renderingMode}
+				onChange={(event) => {
+					setSettings(prevState => ({
+						...prevState,
+						renderingMode: event.target.value as typeof settings.renderingMode
+					}))
+				}}
+			>
+				<option value="grid">{t[locale].grid}</option>
+				<option value="columns">{t[locale].column}</option>
+			</select>
+		</div>
 		{/*<div>
-			<label className="block font-bold mb-1">{t[locale].language}</label>
+			<label>{t[locale].language}</label>
 			{publicRuntimeConfig.locales.map((locale: string) =>
 				<Link href={window.location.href} locale={locale}>
-					<a className="mr-2">{locale}</a>
+					<a>{locale}</a>
 				</Link>
 			)}
 		</div>*/}
