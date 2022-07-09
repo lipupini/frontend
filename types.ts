@@ -31,6 +31,7 @@ export interface Settings {
 }
 
 export interface SettingsFormProps {
+	account: string
 	settingsState: [
 		Settings,
 		Dispatch<SetStateAction<Settings>>

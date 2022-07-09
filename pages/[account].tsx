@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 		throw new Error('Could not determine locale')
 	}
 
-	const { account } = router.query
+	const account = router.query.account as string
 
 	const { publicRuntimeConfig } = getConfig()
 	const [ settingsModalOpen, setSettingsModalOpen ] = useState<boolean>(false)
@@ -206,7 +206,7 @@ const Home: NextPage = () => {
 				</div>
 			</main>
 			<Modal openState={[ settingsModalOpen, setSettingsModalOpen ]}>
-				<SettingsForm settingsState={[ settings, setSettings ]} />
+				<SettingsForm settingsState={[ settings, setSettings ]} account={account} />
 			</Modal>
 		</div>
 	)
