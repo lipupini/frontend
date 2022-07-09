@@ -2,13 +2,15 @@ import { Dispatch, SetStateAction } from 'react'
 
 export type Breakpoint = 'small' | 'medium' | 'large'
 
+export interface AppApiResponseMeta {
+	total?: number
+	hasPrevious?: boolean
+	hasNext?: boolean
+}
+
 export interface AppApiResponse {
 	data: []
-	meta: {
-		total?: number
-		hasPrevious?: boolean
-		hasNext?: boolean
-	}
+	meta: AppApiResponseMeta
 }
 
 export interface AppLocaleTranslation {
@@ -30,10 +32,21 @@ export interface Settings {
 	renderingMode: 'grid' | 'columns'
 }
 
+export interface PageState {
+	page: number
+	setPage: Dispatch<SetStateAction<number>>
+}
+
 export interface SettingsFormProps {
 	account: string
 	settingsState: [
 		Settings,
 		Dispatch<SetStateAction<Settings>>
 	]
+}
+
+export interface PaginationProps {
+	meta: AppApiResponseMeta
+	pageState: PageState
+	locale: string
 }

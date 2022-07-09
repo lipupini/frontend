@@ -8,6 +8,7 @@ import { translations as t } from '../i18n'
 import Modal from '../components/Modal'
 import SettingsForm from '../components/SettingsForm'
 import { Settings } from '../types'
+import Pagination from "../components/Pagination";
 
 const Home: NextPage = () => {
 	const router = useRouter()
@@ -157,39 +158,20 @@ const Home: NextPage = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<title>{publicRuntimeConfig.platformTitle}</title>
 			</Head>
-
 			<main>
-				<div id="app-bar">
+				<header className="app-bar">
 					<div id="button-container-settings">
 						<button onClick={() => setSettingsModalOpen(true)} title={t[locale].settings}>
 							⚙
 						</button>
 					</div>
-					{(media.meta.hasPrevious || media.meta.hasNext) &&
-						<div className="previous">
-							<button onClick={() => setPage(prevState => prevState - 1)} disabled={!media.meta.hasPrevious} title={t[locale].previous}>
-								←
-							</button>
-						</div>
-					}
-					<div className="index">
-						<button onClick={() => router.push('/')} title={t[locale].index}>
-							↑
-						</button>
-					</div>
-					{(media.meta.hasPrevious || media.meta.hasNext) &&
-						<div className="next">
-							<button onClick={() => setPage(prevState => prevState + 1)} disabled={!media.meta.hasNext} title={t[locale].next}>
-								→
-							</button>
-						</div>
-					}
+					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} />
 					<div className="about">
 						<button onClick={() => window.open('https://github.com/instalution/frontend')} title={t[locale].about}>
 							?
 						</button>
 					</div>
-				</div>
+				</header>
 				<div id="media-container" className={`${settings.renderingMode} ${settings.autoHeight ? 'autoHeight' : 'square'}`}>
 					{media && media.data.map((filename: string) => (
 						<div key={filename}>
@@ -206,6 +188,9 @@ const Home: NextPage = () => {
 						</div>
 					))}
 				</div>
+				<footer className="app-bar">
+					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} />
+				</footer>
 			</main>
 			<Modal openState={[ settingsModalOpen, setSettingsModalOpen ]}>
 				<SettingsForm settingsState={[ settings, setSettings ]} account={account} />
