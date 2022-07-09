@@ -125,7 +125,8 @@ button {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 2px dotted $light;
+	border: 2px solid darken($light, 25);
+	box-shadow: 0 0 5px darken($light, 30);
 	border-radius: 3px;
 	min-width: 320px;
 
