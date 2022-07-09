@@ -17,6 +17,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: 'Render mode',
 		column: 'Columns (Top to bottom)',
 		grid: 'Grid (Left to right)',
+		columnCount: 'Number of Columns',
 	},
 	'fr': {
 		next: 'Suivant',
@@ -34,6 +35,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: 'Mode de rendu',
 		column: 'Colonnes (de haut en bas)',
 		grid: 'Grille (de gauche à droite)',
+		columnCount: 'Nombre de colonnes',
 	},
 	'es': {
 		next: 'Siguiente',
@@ -51,6 +53,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: 'Modo de renderización',
 		column: 'Columnas (de arriba a abajo)',
 		grid: 'Rejilla (de izquierda a derecha)',
+		columnCount: 'Número de columnas',
 	},
 	'de': {
 		next: 'Weiter',
@@ -68,6 +71,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: 'Rendermodus',
 		column: 'Säulen (von oben nach unten)',
 		grid: 'Raster (von links nach rechts)',
+		columnCount: 'Anzahl der Spalten',
 	},
 	'ru': {
 		next: 'Следующий',
@@ -85,6 +89,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: 'Режим рендеринга',
 		column: 'Колонки (сверху вниз)',
 		grid: 'Сетка (слева направо)',
+		columnCount: 'Количество столбцов',
 	},
 	'cn': {
 		next: '下一页',
@@ -102,6 +107,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: '渲染模式',
 		column: '栏目（从上到下）',
 		grid: '网格（从左到右）',
+		columnCount: '列的数量',
 	},
 	'kr': {
 		next: '다음',
@@ -119,6 +125,7 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: '렌더링 모드',
 		column: '열(위에서 아래로)',
 		grid: '그리드(왼쪽에서 오른쪽으로)',
+		columnCount: '열 수',
 	},
 	'jp': {
 		next: '次のページ',
@@ -136,5 +143,6 @@ export const translations: AppLocaleTranslation = {
 		renderingMode: 'レンダリングモード',
 		column: 'コラム（上から下へ）',
 		grid: 'グリッド（左から右へ）',
+		columnCount: '列数',
 	}
 }

@@ -21,7 +21,7 @@ const Modal = ({openState, children}: ModalProps) => {
 	return open ?
 		<div id="modal-wrapper">
 				<div id="modal-overlay" onClick={() => setOpen(false)}/>
-				<div id="modal">
+				<div id="modal" className="border">
 					{children}
 				</div>
 		</div> : <></>

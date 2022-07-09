@@ -4,11 +4,10 @@ import { SettingsFormProps } from '../../types'
 import getConfig from 'next/config'
 import Link from 'next/link'
 
-export const SettingsForm = ({settingsState}: SettingsFormProps) => {
+export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
 	const { locale } = useRouter()
 	const [ settings, setSettings ] = settingsState
 	const { publicRuntimeConfig } = getConfig()
-	const router = useRouter()
 
 	if (!locale) {
 		throw new Error('Could not determine locale')
@@ -60,14 +59,30 @@ export const SettingsForm = ({settingsState}: SettingsFormProps) => {
 				<option value="columns">{t[locale].column}</option>
 			</select>
 		</div>
-		{/*<div>
-			<label>{t[locale].language}</label>
-			{publicRuntimeConfig.locales.map((locale: string) =>
-				<Link href={window.location.href} locale={locale}>
-					<a>{locale}</a>
-				</Link>
-			)}
+		{/*<div className="form-input-label">
+			<label>{t[locale].columnCount}</label>
+			<div className="input-grid text-center">
+				<div>
+					<input type="number" min="1" />
+				</div>
+				<div>
+					<input type="number" min="1" />
+				</div>
+				<div>
+					<input type="number" min="1" />
+				</div>
+			</div>
 		</div>*/}
+		<div>
+			<label>{t[locale].language}</label>
+			<div className="input-grid text-center gap">
+				{publicRuntimeConfig.locales.map((locale: string) =>
+					<Link href={`/${account}`} locale={locale}>
+						<a className="border">{locale}</a>
+					</Link>
+				)}
+			</div>
+		</div>
 	</>
 }
 

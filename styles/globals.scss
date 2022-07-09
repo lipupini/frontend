@@ -2,13 +2,14 @@ $dark: #2d2d2d;
 $light: #bfbfbf;
 $spacing: 1.5rem;
 
-body, select, button, a {
+body, select, button, input {
 	background-color: $dark;
 	color: $light;
 	font-size: 16px;
 }
 
 a {
+	color: $light;
 	text-decoration: none;
 }
 
@@ -34,7 +35,7 @@ body {
 	}
 }
 
-select {
+select, input {
 	padding: $spacing / 2;
 }
 
@@ -108,6 +109,19 @@ button {
 	}
 }
 
+.text-center {
+	text-align: center;
+}
+
+.input-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap {
+	gap: $spacing / 2;
+}
+
 #modal-overlay {
 	background-color: $dark;
 	opacity: 0.85;
@@ -118,6 +132,10 @@ button {
 	left: 0;
 }
 
+.border {
+	border: 2px solid darken($light, 25);
+}
+
 #modal {
 	background-color: #27272A;
 	padding: $spacing;
@@ -125,7 +143,6 @@ button {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 2px solid darken($light, 25);
 	box-shadow: 0 0 5px darken($light, 30);
 	border-radius: 3px;
 	min-width: 320px;
