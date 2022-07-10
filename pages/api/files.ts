@@ -62,8 +62,7 @@ export default function Handler(
 		data: files,
 		meta: {
 			total: totalFiles,
-			hasNext: pageNumber * perPage < totalFiles,
-			hasPrevious: pageNumber > 1,
+			perPage,
 		}
 	})
 }

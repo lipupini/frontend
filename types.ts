@@ -3,9 +3,8 @@ import { Dispatch, SetStateAction } from 'react'
 export type Breakpoint = 'small' | 'medium' | 'large'
 
 export interface AppApiResponseMeta {
-	total?: number
-	hasPrevious?: boolean
-	hasNext?: boolean
+	total: number
+	perPage: number
 }
 
 export interface AppApiResponse {

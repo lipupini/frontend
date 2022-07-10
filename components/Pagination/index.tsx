@@ -3,13 +3,13 @@ import { PaginationProps } from '../../types'
 import { useRouter } from 'next/router'
 
 const Pagination = ({ meta, pageState, locale, location }: PaginationProps) => {
-	const { setPage } = pageState
+	const { page, setPage } = pageState
 	const router = useRouter()
 
 	return <>
-		{(meta.hasPrevious || meta.hasNext) &&
+		{meta.total > meta.perPage &&
 			<div className="previous">
-				<button onClick={() => setPage(prevState => prevState - 1)} disabled={!meta.hasPrevious} title={t[locale].previous}>
+				<button onClick={() => setPage(prevState => prevState - 1)} disabled={page === 1} title={t[locale].previous}>
 					←
 				</button>
 			</div>
@@ -19,9 +19,9 @@ const Pagination = ({ meta, pageState, locale, location }: PaginationProps) => {
 				{ location === 'header' && '↑' }
 			</button>
 		</div>
-		{(meta.hasPrevious || meta.hasNext) &&
+		{meta.total > meta.perPage &&
 			<div className="next">
-				<button onClick={() => setPage(prevState => prevState + 1)} disabled={!meta.hasNext} title={t[locale].next}>
+				<button onClick={() => setPage(prevState => prevState + 1)} disabled={page === Math.ceil(meta.total / meta.perPage)} title={t[locale].next}>
 					→
 				</button>
 			</div>
