@@ -2,9 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import useConfig from 'next/config'
 import { AppApiResponse } from '../../types'
 
-// @TODO: Make this configurable
-const perPage = 36
-
 const glob = require('glob')
 const fs = require('fs')
 
@@ -19,11 +16,20 @@ export default function Handler(
 	const {serverRuntimeConfig} = useConfig()
 	const query = req.query
 	// `account` should be present because it's defined in the route
-	const { account, page, sort } = query
+	const { account, page, perPage, sort } = query
 	const pageNumber: number = parseInt(page as string)
 
 	if (!sort) {
 		throw new Error('No sort specified')
+	}
+
+	if (!perPage) {
+		throw new Error('No perPage specified')
+	}
+
+	const perPageInt = parseInt(perPage as string)
+	if (perPageInt < 1) {
+		throw new Error('Invalid perPage specified')
 	}
 
 	if (!['random', 'filename'].includes(sort.toString())) {
@@ -49,8 +55,8 @@ export default function Handler(
 			new RegExp('^' + escapeRegExp(publicFolder)), '')
 	}
 
-	if (files.length > perPage) {
-		files = files.slice((pageNumber - 1) * perPage, perPage * pageNumber)
+	if (files.length > perPageInt) {
+		files = files.slice((pageNumber - 1) * perPageInt, perPageInt * pageNumber)
 	}
 
 	if (sort === 'random') {
@@ -62,7 +68,6 @@ export default function Handler(
 		data: files,
 		meta: {
 			total: totalFiles,
-			perPage,
 		}
 	})
 }

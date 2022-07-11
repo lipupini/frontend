@@ -26,6 +26,7 @@ const Home: NextPage = () => {
 		autoHeight: false,
 		sort: 'filename',
 		renderingMode: 'grid',
+		perPage: 36,
 		columnBreakpoints: {
 			small: 2,
 			medium: 4,
@@ -35,7 +36,9 @@ const Home: NextPage = () => {
 	const [ page, setPage ] = useState<number>(1)
 	const [ media, setMedia ] = useState<AppApiResponse>({
 		data: [],
-		meta: {},
+		meta: {
+			total: 0,
+		},
 	})
 
 	const detectBreakpoint = (): Breakpoint => {
@@ -122,7 +125,9 @@ const Home: NextPage = () => {
 			return
 		}
 
-		fetch('/api/files?account=' + account + '&page=' + page + '&sort=' + settings.sort, {
+		fetch(
+			'/api/files?account=' + account + '&page=' + page + '&perPage=' + settings.perPage + '&sort=' + settings.sort,
+			{
 			method: 'GET',
 			headers: { 'Content-type': 'application/json' },
 		})
@@ -165,7 +170,7 @@ const Home: NextPage = () => {
 							⚙
 						</button>
 					</div>
-					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} location="header" />
+					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} location="header" settings={settings} />
 					<div className="about">
 						<button onClick={() => window.open('https://github.com/instalution/frontend')} title={t[locale].about}>
 							?
@@ -189,7 +194,7 @@ const Home: NextPage = () => {
 					))}
 				</div>
 				<footer className="app-bar">
-					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} location="footer" />
+					<Pagination meta={media.meta} pageState={{ page, setPage }} locale={locale} location="footer" settings={settings} />
 				</footer>
 			</main>
 			<Modal openState={[ settingsModalOpen, setSettingsModalOpen ]}>
