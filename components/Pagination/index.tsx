@@ -2,12 +2,12 @@ import { translations as t } from '../../i18n'
 import { PaginationProps } from '../../types'
 import { useRouter } from 'next/router'
 
-const Pagination = ({ meta, pageState, locale, location }: PaginationProps) => {
+const Pagination = ({ meta, pageState, locale, location, settings }: PaginationProps) => {
 	const { page, setPage } = pageState
 	const router = useRouter()
 
 	return <>
-		{meta.total > meta.perPage &&
+		{meta.total > settings.perPage &&
 			<div className="previous">
 				<button onClick={() => setPage(prevState => prevState - 1)} disabled={page === 1} title={t[locale].previous}>
 					←
@@ -19,9 +19,9 @@ const Pagination = ({ meta, pageState, locale, location }: PaginationProps) => {
 				{ location === 'header' && '↑' }
 			</button>
 		</div>
-		{meta.total > meta.perPage &&
+		{meta.total > settings.perPage &&
 			<div className="next">
-				<button onClick={() => setPage(prevState => prevState + 1)} disabled={page === Math.ceil(meta.total / meta.perPage)} title={t[locale].next}>
+				<button onClick={() => setPage(prevState => prevState + 1)} disabled={page === Math.ceil(meta.total / settings.perPage)} title={t[locale].next}>
 					→
 				</button>
 			</div>

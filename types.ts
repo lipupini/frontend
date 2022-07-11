@@ -4,7 +4,6 @@ export type Breakpoint = 'small' | 'medium' | 'large'
 
 export interface AppApiResponseMeta {
 	total: number
-	perPage: number
 }
 
 export interface AppApiResponse {
@@ -29,6 +28,7 @@ export interface Settings {
 	sort: string
 	columnBreakpoints: {[index in Breakpoint]: number}
 	renderingMode: 'grid' | 'columns'
+	perPage: number
 }
 
 export interface PageState {
@@ -49,4 +49,5 @@ export interface PaginationProps {
 	pageState: PageState
 	locale: string
 	location: 'header' | 'footer'
+	settings: Settings
 }
