@@ -20,9 +20,9 @@ InstalutionはInstagramの革命的な解決策を目指します。
 
 Instalutionの導入には、現在4つの方法があります。どれか1つの方法を選択してください。
 
-### Yarn メソッド
+### pnpM メソッド
 
-- Yarn](https://yarnpkg.com/)
+- [pnpM](https://pnpm.io/installation)
 
 ### Docker Compose メソッド
 
@@ -40,17 +40,17 @@ Instalutionの導入には、現在4つの方法があります。どれか1つ�
 
 ## Instalution のインストール
 
-### オプション1: Yarnを使ったInstalutionのインストール
-1) `git clone https://github.com/instalution/frontend.git` を実行します。
+### オプション1: pnpMを使ったInstalutionのインストール
+1) `git clone https://github.com/instalution/frontend.git instalution` を実行します。
 2) `cd installution` を実行します。
-3) `yarn` を実行します。
-4) `yarn next telemetry disable` を実行します。
+3) `pnpm install` を実行します。
+4) `pnpm next telemetry disable` を実行します。
 5) インスタグラムからデータの[アーカイブをダウンロード](https://help.instagram.com/181231772500920)
 6) アーカイブ内の `media/posts/` ディレクトリの内容を `./public/accounts/[archive_folder_name]` に解凍します。ベースフォルダ名がユーザー名となり、Instalutionが各サブフォルダ内の画像や動画を全て読み込む。
-7) `yarn dev` -- Instalution は http://localhost:1234 で利用できるようになります。
+7) `pnpm dev` -- Instalution は http://localhost:1234 で利用できるようになります。
 
 ### オプション 2: Docker Compose を使って Instalution をインストールする。
-1) `git clone https://github.com/instalution/frontend.git` を実行します。
+1) `git clone https://github.com/instalution/frontend.git instalution` を実行します。
 2) `cd instalution` を実行します。
 3) インスタグラムからデータの[アーカイブをダウンロード](https://help.instagram.com/181231772500920)
 4) アーカイブ内の `media/posts/` ディレクトリの内容を `./public/accounts/[archive_folder_name]` に解凍します。ベースフォルダ名がユーザー名となり、Instalutionはサブフォルダごとに画像や動画を読み込んでいきます。
@@ -58,7 +58,7 @@ Instalutionの導入には、現在4つの方法があります。どれか1つ�
 
 ### オプション 3: Dockerfile を使って Instalution をインストールする。
 
-1) `git clone https://github.com/instalution/frontend.git` を実行します。
+1) `git clone https://github.com/instalution/frontend.git instalution` を実行します。
 2) `cd instalution` を実行します。
 3) インスタグラムからデータのアーカイブをダウンロード](https://help.instagram.com/181231772500920)
 4) アーカイブ内の `media/posts/` ディレクトリの内容を `./public/accounts/[archive_folder_name]` に解凍します。ベースとなるフォルダ名がユーザー名となり、Instalutionは全てのサブフォルダ内の画像や動画を読み込む。
@@ -66,7 +66,7 @@ Instalutionの導入には、現在4つの方法があります。どれか1つ�
 6) `docker run --volume=$(pwd):/home/node/app --publish 1234:1234 frontend` -- Instalution は http://localhost:1234 で利用できるはずです。
 
 ### オプション4: VagrantでInstalutionをインストールする。
-1) `git clone https://github.com/instalution/frontend.git` を実行します。
+1) `git clone https://github.com/instalution/frontend.git instalution` を実行します。
 2) `cd instalution` を実行します。
 3) インスタグラムからデータのアーカイブをダウンロード](https://help.instagram.com/181231772500920)
 4) アーカイブ内の `media/posts/` ディレクトリの内容を `./public/accounts/[archive_folder_name]` に解凍します。ベースフォルダ名がユーザー名となり、Instalutionが各サブフォルダ内の画像や動画を全て読み込む。

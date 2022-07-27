@@ -2,7 +2,7 @@ version: "2"
 services:
   frontend:
     tty: true
-    image: "node:16"
+    image: "gplane/pnpm:alpine@sha256:59ce8b532fc0834aee90bb9c366c6a4b05e03f3ced246e2edcdcc04939cca207"
     container_name: frontend
     network_mode: "host"
     expose:
@@ -10,4 +10,4 @@ services:
     volumes:
       - ./:/home/node/app
     working_dir: /home/node/app
-    command: yarn dev --port 1234
+    command: ash -c "pnpm install && pnpm dev --port 1234"
