@@ -20,9 +20,9 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 
 目前有四种方法可以支持Instalution的启动和运行。你只需要选择一种方法。
 
-### Yarn方法
+### pnpM方法
 
-- [Yarn](https://yarnpkg.com/)
+- [pnpM](https://pnpm.io/installation)
 
 ### Docker Compose方法
 
@@ -40,17 +40,17 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 
 ## 安装Instalution
 
-### 选项1：用Yarn安装Instalution
-1) `git clone https://github.com/instalution/frontend.git `.
-2) `cd instalution
-3) `yarn'。
-4) `yarn next telemetry disable`。
+### 选项1：用pnpM安装Instalution
+1) `git clone https://github.com/instalution/frontend.git instalution`
+2) `cd instalution`
+3) `pnpm install`
+4) `pnpm next telemetry disable`。
 5) [从Instagram下载你的数据档案](https://help.instagram.com/181231772500920)
 6) 将存档中的`media/posts/`目录的内容提取到`./public/accounts/[archive_folder_name]`。基础文件夹名称将成为用户名，Instalution将读取每个子文件夹中的每张图片和视频。
-7) `yarn dev` -- Instalution现在应该可以在http://localhost:1234。
+7) `pnpm dev` -- Instalution现在应该可以在http://localhost:1234。
 
 ###选项2：用Docker Compose安装Instalution
-1) `git clone https://github.com/instalution/frontend.git`。
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution `
 3) [从Instagram下载你的数据档案](https://help.instagram.com/181231772500920)
 4) 将存档中的`media/posts/`目录的内容提取到`./public/accounts/[archive_folder_name]`。基础文件夹名称将成为用户名，Instalution将读取每个子文件夹中的每张图片和视频。
@@ -58,7 +58,7 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 
 ###选项3：用Dockerfile安装Instalution
 
-1) `git clone https://github.com/instalution/frontend.git`。
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`。
 3) [从Instagram下载你的数据档案](https://help.instagram.com/181231772500920)
 4) 将存档中的`media/posts/`目录的内容提取到`./public/accounts/[archive_folder_name]`。基础文件夹名称将成为用户名，Instalution将读取每个子文件夹中的每张图片和视频。
@@ -66,7 +66,7 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 6) `docker run --volume=$(pwd):/home/node/app --publish 1234:1234 frontend` -- Instalution现在应该可以在http://localhost:1234。
 
 ###选项4：用Vagrant安装Instalution
-1) `git clone https://github.com/instalution/frontend.git `.
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution `
 3) [从Instagram下载你的数据档案](https://help.instagram.com/181231772500920)
 4) 将存档中的`media/posts/`目录下的内容提取到`./public/accounts/[archive_folder_name]`。基础文件夹名称将成为用户名，Instalution将读取每个子文件夹中的每张图片和视频。

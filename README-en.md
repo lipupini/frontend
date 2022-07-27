@@ -20,9 +20,9 @@ You are invited to join one of the groups:
 
 There are currently four supported methods for getting up and running with Instalution. You only need to pick one method:
 
-### Yarn Method
+### pnpM Method
 
-- [Yarn](https://yarnpkg.com/)
+- [pnpM](https://pnpm.io/installation)
 
 ### Docker Compose Method
 
@@ -40,17 +40,17 @@ There are currently four supported methods for getting up and running with Insta
 
 ## Installing Instalution
 
-### Option 1: Installing Instalution with Yarn
-1) `git clone https://github.com/instalution/frontend.git`
+### Option 1: Installing Instalution with pnpM
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
-3) `yarn`
-4) `yarn next telemetry disable`
+3) `pnpm install`
+4) `pnpm next telemetry disable`
 5) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
 6) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
-7) `yarn dev` -- Instalution should now be available at http://localhost:1234
+7) `pnpm dev` -- Instalution should now be available at http://localhost:1234
 
 ### Option 2: Installing Instalution with Docker Compose
-1) `git clone https://github.com/instalution/frontend.git`
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
 3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
 4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
@@ -58,7 +58,7 @@ There are currently four supported methods for getting up and running with Insta
 
 ### Option 3: Installing Instalution with Dockerfile
 
-1) `git clone https://github.com/instalution/frontend.git`
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
 3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
 4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.
@@ -66,7 +66,7 @@ There are currently four supported methods for getting up and running with Insta
 6) `docker run --volume=$(pwd):/home/node/app --publish 1234:1234 frontend` -- Instalution should now be available at http://localhost:1234
 
 ### Option 4: Installing Instalution with Vagrant
-1) `git clone https://github.com/instalution/frontend.git`
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
 3) [Download an archive](https://help.instagram.com/181231772500920) of your data from Instagram
 4) Extract the contents of the `media/posts/` directory in the archive to `./public/accounts/[archive_folder_name]`. The base folder name will become the username, and Instalution will read every image and video in every subfolder.

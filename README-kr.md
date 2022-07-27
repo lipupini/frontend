@@ -20,9 +20,9 @@
 
 There are currently four supported methods for getting up and running with Instalution. You only need to pick one method:
 
-### Yarn 방법 또는 옵션
+### pnpM 방법 또는 옵션
 
-- [Yarn](https://yarnpkg.com/)
+- [pnpM](https://pnpm.io/installation)
 
 ### Docker Compose 방법 또는 옵션
 
@@ -40,17 +40,17 @@ There are currently four supported methods for getting up and running with Insta
 
 ## 설치 Instalution
 
-### Option 1: 함께 설치 Yarn 방법 또는 옵션
-1) `git clone https://github.com/instalution/frontend.git`
+### Option 1: 함께 설치 pnpM 방법 또는 옵션
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
-3) `yarn`
-4) `yarn next telemetry disable`
+3) `pnpm install`
+4) `pnpm next telemetry disable`
 5) [5)인스 타 그램에서 데이터의 아카이브를 다운로드 Instagram](https://help.instagram.com/181231772500920)
 6) 에 아카이브의'미디어/게시물/'디렉토리의 내용을 추출 `./public/accounts/[archive_folder_name]`. 기본 폴더 이름은 사용자 이름이 될 것이며,설치는 모든 하위 폴더에있는 모든 이미지와 비디오를 읽습니다.
-7) `yarn dev`설치 지금 사용할 수 있어야합니다 http://localhost:1234
+7) `pnpm dev`설치 지금 사용할 수 있어야합니다 http://localhost:1234
 
 ### Option 2: 함께 설치 Docker Compose 방법 또는 옵션
-1) `git clone https://github.com/instalution/frontend.git`
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
 3) [5)인스 타 그램에서 데이터의 아카이브를 다운로드 Instagram](https://help.instagram.com/181231772500920)
 4) 에 아카이브의'미디어/게시물/'디렉토리의 내용을 추출 `./public/accounts/[archive_folder_name]`. 기본 폴더 이름은 사용자 이름이 될 것이며,설치는 모든 하위 폴더에있는 모든 이미지와 비디오를 읽습니다.
@@ -58,7 +58,7 @@ There are currently four supported methods for getting up and running with Insta
 
 ### Option 3: 함께 설치 Dockerfile 방법 또는 옵션
 
-1) `git clone https://github.com/instalution/frontend.git`
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
 3) [5)인스 타 그램에서 데이터의 아카이브를 다운로드 Instagram](https://help.instagram.com/181231772500920)
 4) 에 아카이브의'미디어/게시물/'디렉토리의 내용을 추출 `./public/accounts/[archive_folder_name]`. 기본 폴더 이름은 사용자 이름이 될 것이며,설치는 모든 하위 폴더에있는 모든 이미지와 비디오를 읽습니다.
@@ -66,7 +66,7 @@ There are currently four supported methods for getting up and running with Insta
 6) `docker run --volume=$(pwd):/home/node/app --publish 1234:1234 frontend` -- 설치 지금 사용할 수 있어야합니다 http://localhost:1234
 
 ### Option 4: 함께 설치 Vagrant 방법 또는 옵션
-1) `git clone https://github.com/instalution/frontend.git`
+1) `git clone https://github.com/instalution/frontend.git instalution`
 2) `cd instalution`
 3) [5)인스 타 그램에서 데이터의 아카이브를 다운로드 Instagram](https://help.instagram.com/181231772500920)
 4) 에 아카이브의'미디어/게시물/'디렉토리의 내용을 추출 `./public/accounts/[archive_folder_name]`. 기본 폴더 이름은 사용자 이름이 될 것이며,설치는 모든 하위 폴더에있는 모든 이미지와 비디오를 읽습니다.

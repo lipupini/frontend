@@ -1,22 +1,24 @@
 $provision = <<-SCRIPT
-	curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
-	echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-	sudo apt update
-	sudo apt install -y yarn
+	curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
+	sudo apt-get install -y nodejs
+	sudo corepack enable
+	corepack prepare pnpm@7.6.0 --activate
 
 	cd /home/vagrant/frontend
-	yarn
-	yarn next telemetry disable
-	sudo yarn global add pm2
-	sudo pm2 start 'yarn dev --hostname 0.0.0.0' --name frontend
-	sudo pm2 startup
+	pnpm install
+	pnpm next telemetry disable
+
+	sudo pnpm add --global pm2
+	pm2 start 'pnpm dev --hostname 0.0.0.0' --name frontend
+	#pm2 startup
+	sudo env PATH=$PATH:/usr/bin /usr/pnpm-global/5/node_modules/.pnpm/pm2@5.2.0/node_modules/pm2/bin/pm2 startup systemd -u vagrant --hp /home/vagrant
 SCRIPT
 
 Vagrant.configure("2") do |config|
 	# SSH login is --
 	# vagrant:vagrant
-	config.vm.box = "generic/ubuntu2104"
+	config.vm.box = "generic/debian11"
 	config.vm.synced_folder ".", "/home/vagrant/frontend"
 	config.vm.network "forwarded_port", guest: 1234, host: 1234
-	config.vm.provision "shell", inline: $provision
+	config.vm.provision "shell", inline: $provision, privileged: false
 end
