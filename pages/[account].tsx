@@ -180,7 +180,7 @@ const Home: NextPage = () => {
 				<div id="media-container" className={`${settings.renderingMode} ${settings.autoHeight ? 'autoHeight' : 'square'}`}>
 					{media && media.data.map((filename: string) => (
 						<div key={filename}>
-							{/\.(jpg|webp)$/.test(filename) ?
+							{/\.(jpg|webp)$/i.test(filename) ?
 								settings.autoHeight ?
 									imageMarkup.autoHeight(filename) : imageMarkup.squareBackground(filename)
 								: (
