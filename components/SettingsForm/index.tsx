@@ -3,14 +3,37 @@ import { useRouter } from 'next/router'
 import { SettingsFormProps } from '../../types'
 import getConfig from 'next/config'
 import Link from 'next/link'
+import { Breakpoint } from '../../types'
 
-export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
+export const SettingsForm = ({settingsState, account, currentBreakpoint, setCurrentColumnCount}: SettingsFormProps) => {
 	const { locale } = useRouter()
 	const [ settings, setSettings ] = settingsState
 	const { publicRuntimeConfig } = getConfig()
 
 	if (!locale) {
 		throw new Error('Could not determine locale')
+	}
+
+	const columnCountInput = (breakpoint: Breakpoint) => {
+		if (breakpoint !== currentBreakpoint) {
+			return <></>
+		}
+
+		return <input
+			type="number" min="1"
+			style={{width: '50px'}}
+			value={settings.columnBreakpoints[breakpoint]}
+			onChange={(event) => {
+				setSettings(prevState => ({
+					...prevState,
+					columnBreakpoints: {
+						...prevState.columnBreakpoints,
+						[breakpoint]: event.target.value, // This should allow type `number`?
+					},
+				}))
+				setCurrentColumnCount(event.target.value)
+			}}
+		/>
 	}
 
 	return <div id="settings-form">
@@ -59,25 +82,17 @@ export const SettingsForm = ({settingsState, account}: SettingsFormProps) => {
 				<option value="columns">{t[locale].column}</option>
 			</select>
 		</div>
-		{/*<div className="form-input-label">
+		<div className="form-input-label">
 			<label>{t[locale].columnCount}</label>
-			<div className="input-grid text-center">
-				<div>
-					<input type="number" min="1" />
-				</div>
-				<div>
-					<input type="number" min="1" />
-				</div>
-				<div>
-					<input type="number" min="1" />
-				</div>
-			</div>
-		</div>*/}
+			{columnCountInput('small')}
+			{columnCountInput('medium')}
+			{columnCountInput('large')}
+		</div>
 		<div>
 			<label>{t[locale].language}</label>
-			<div className="input-grid text-center gap">
+			<div className="input-grid input-grid-4 text-center gap">
 				{publicRuntimeConfig.locales.map((locale: string) =>
-					<Link href={`/${account}`} locale={locale}>
+					<Link href={`/${account}`} locale={locale} key={locale}>
 						<a className="border">{locale}</a>
 					</Link>
 				)}
