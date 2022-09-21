@@ -42,6 +42,8 @@ export interface SettingsFormProps {
 		Settings,
 		Dispatch<SetStateAction<Settings>>
 	]
+	currentBreakpoint: Breakpoint
+	setCurrentColumnCount: CallableFunction
 }
 
 export interface PaginationProps {

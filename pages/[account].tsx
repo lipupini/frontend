@@ -71,7 +71,7 @@ const Home: NextPage = () => {
 	}
 
 	const [ currentBreakpoint, setCurrentBreakpoint ] = useState<keyof typeof settings.columnBreakpoints>(detectBreakpoint())
-	const [ columnCount, setColumnCount ] = useState<number>(settings.columnBreakpoints[detectBreakpoint()])
+	const [ currentColumnCount, setCurrentColumnCount ] = useState<number>(settings.columnBreakpoints[detectBreakpoint()])
 
 	useEffect(() => {
 		const handleWindowResize = (event: UIEvent): void => {
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
 			setCurrentBreakpoint(detectedBreakpoint)
 		}
 
-		setColumnCount(settings.columnBreakpoints[currentBreakpoint])
+		setCurrentColumnCount(settings.columnBreakpoints[currentBreakpoint])
 
 		window.addEventListener('resize', handleWindowResize)
 		return () => {
@@ -97,18 +97,18 @@ const Home: NextPage = () => {
 			case 'grid' :
 				mediaContainer.classList.add('grid')
 				mediaContainer.classList.remove('columns')
-				mediaContainer.style.gridTemplateColumns = `repeat(${columnCount}, minmax(0, 1fr))`
+				mediaContainer.style.gridTemplateColumns = `repeat(${currentColumnCount}, minmax(0, 1fr))`
 				mediaContainer.style.columns = 'unset'
 				break;
 			case 'columns' :
 				mediaContainer.classList.add('columns')
 				mediaContainer.classList.remove('grid')
-				mediaContainer.style.columns = columnCount.toString()
+				mediaContainer.style.columns = currentColumnCount.toString()
 				mediaContainer.style.gridTemplateColumns = 'unset'
 				break;
 
 		}
-	}, [settings.renderingMode, columnCount])
+	}, [settings.renderingMode, currentColumnCount])
 
 	useEffect(() => {
 		if (settings.autoHeight) {
@@ -198,7 +198,7 @@ const Home: NextPage = () => {
 				</footer>
 			</main>
 			<Modal openState={[ settingsModalOpen, setSettingsModalOpen ]}>
-				<SettingsForm settingsState={[ settings, setSettings ]} account={account} />
+				<SettingsForm settingsState={[ settings, setSettings ]} account={account} currentBreakpoint={currentBreakpoint} setCurrentColumnCount={setCurrentColumnCount} />
 			</Modal>
 		</div>
 	)
