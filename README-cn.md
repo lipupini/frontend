@@ -10,12 +10,6 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 2) 对贡献代码感兴趣的开发者
 3) 对该项目有任何想法或见解的用户
 
-我们邀请你加入其中一个小组。
-
-- Matrix @ #instalution:catgirl.cloud
-- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
-- [Telegram](https://t.me/instalution)
-
 ## 要求
 
 目前有四种方法可以支持Instalution的启动和运行。你只需要选择一种方法。
@@ -75,10 +69,6 @@ Instalution旨在成为Instagram的一个革命性的解决方案。
 ###状态
 
 目前，Instalution在提取档案后同时显示图片和视频。严格来说，它不一定是Instagram的档案，你可以把任何媒体放在用户名文件夹中。
-
-一个演示可能在[instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
-
-希望很快会有更多:)
 
 如果应该有一个登录管理照片和视频的前端，它可以是一个独立的项目，在最简单的形式下，它所需要的是一个固定在`./public/accounts/[username]`的用户名的文件管理器。事实上，也许这些最终可以选择性地对应于操作系统的用户名（例如，在`/home/`或`C:/Users/`等）。
 
