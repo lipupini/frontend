@@ -10,12 +10,6 @@
 2)코드 기여에 관심이있는 개발자
 3)프로젝트에 대한 아이디어 또는 통찰력을 가진 사용자
 
-당신은 그룹 중 하나에 초대:
-
--매트릭스 #installation:catgirl.cloud
--[싸이 월드,미투데이](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
--[전보](https://t.me/installation)
-
 ## 요구 사항
 
 There are currently four supported methods for getting up and running with Instalution. You only need to pick one method:
@@ -75,10 +69,6 @@ There are currently four supported methods for getting up and running with Insta
 ###상태
 
 설치는 현재 한 번 추출 아카이브에서 이미지와 비디오를 모두 표시합니다. 그것은 기술적으로 인스 타 그램 아카이브가 될 필요가 없습니다,당신은 사용자 이름 폴더에있는 모든 미디어를 넣을 수 있습니다..
-
-데모는 아마에서 사용할 수 있습니다 [installation.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
-
-바라건대 더 빨리:)
 
 사진 및 비디오를 관리 하기 위해 로그인과 프론트 엔드가 있어야 하는 경우,그것은 별도 프로젝트 수 및 간단한 형태로 필요한 모든 사용자 이름에 고정 된 파일 관리자입니다`./공개/계정/[사용자 이름]`. 사실,아마도 이들은 결국 선택적으로 운영 체제 사용자 이름에 해당 할 수 있습니다
 
