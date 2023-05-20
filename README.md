@@ -2,7 +2,7 @@
 
 # Instalution
 
-Since creating this project, I became aware of PixelFed @ https://pixelfed.org ! It's a promising effort to solve the problem of Instagram for people on Earth (hopefully the entirety of Meta). I would figure that if you come to this repository you might be looking for similar solutions, so there is one :) There has not been a whole lot of activity on this Instalution project, but I'd be happy if someone expressed support for continued efforts on this as well.
+Since creating this project, I became aware of Pixelfed @ https://pixelfed.org ! It's a promising effort to solve the problem of Instagram for people on Earth (hopefully the entirety of Meta). I would figure that if you come to this repository you might be looking for similar solutions, so there is one :) There has not been a whole lot of activity on this Instalution project, but I'd be happy if someone expressed support for continued efforts on this as well.
 
 ![Playwright Workflow](https://github.com/instalution/frontend/actions/workflows/playwright.yml/badge.svg)
 
