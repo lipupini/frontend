@@ -10,12 +10,6 @@ En busca de personas con ideas afines para iniciar una comunidad de desarrollo:
 2) Desarrolladores interesados en aportar código
 3) Usuarios con cualquier idea o visión sobre el proyecto
 
-Le invitamos a unirse a uno de los grupos:
-
-- Matrix @ #instalution:catgirl.cloud
-- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
-- [Telegram](https://t.me/instalution)
-
 ## Requisitos
 
 Actualmente hay cuatro métodos soportados para ponerse en marcha con Instalution. Sólo tienes que elegir un método:
@@ -75,10 +69,6 @@ Actualmente hay cuatro métodos soportados para ponerse en marcha con Instalutio
 ### Estado
 
 Actualmente Instalution muestra tanto las imágenes como los vídeos del archivo una vez extraídos. Técnicamente no tiene que ser un archivo de Instagram, puedes poner cualquier medio en las carpetas de nombre de usuario.
-
-Una demo está probablemente disponible en [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo)
-
-Espero que más pronto :)
 
 Si debe haber un frontend con login para gestionar fotos y videos, podría ser un proyecto separado y en la forma más simple todo lo que requeriría es un gestor de archivos fijado a los nombres de usuario en `./public/accounts/[username]`. De hecho, tal vez estos podrían eventualmente corresponder a los nombres de usuario del sistema operativo (por ejemplo, en `/home/` o `C:/Users/` etc).
 
