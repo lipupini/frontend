@@ -10,12 +10,6 @@ InstalutionはInstagramの革命的な解決策を目指します。
 2) コードに貢献したい開発者
 3) プロジェクトに関するアイデアや洞察をお持ちのユーザー
 
-いずれかのグループに招待します。
-
-- マトリックス @ #instalution:catgirl.cloud
-- WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
-- テレグラム](https://t.me/instalution)
-
 ## 必要条件
 
 Instalutionの導入には、現在4つの方法があります。どれか1つの方法を選択してください。
@@ -75,10 +69,6 @@ Instalutionの導入には、現在4つの方法があります。どれか1つ�
 ### ステータス
 
 Instalution は現在、一度解凍したアーカイブから画像とビデオを表示します。技術的にはInstagramのアーカイブである必要はなく、usernameフォルダに任意のメディアを入れることができます。
-
-デモはおそらく [instalution.tclv.me/owallowallo](https://instalution.tclv.me/owallowallo) で公開されています。
-
-近日中に公開予定です :)
 
 もし、写真やビデオを管理するためにログインするフロントエンドが必要なら、それは別のプロジェクトになるでしょうし、最も単純な形では、ユーザ名に対して `./public/accounts/[username]` に固定されたファイルマネージャが必要なだけでしょう。実際、これらは最終的には OS のユーザ名にも対応できるかもしれません (例: `/home/` や `C:/Users/` などに)。
 
