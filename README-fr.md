@@ -10,12 +10,6 @@ A la recherche de personnes partageant les mêmes idées pour démarrer une comm
 2) Développeurs intéressés à contribuer au code
 3) Utilisateurs ayant des idées ou des points de vue sur le projet.
 
-Vous êtes invité à vous joindre à l'un de ces groupes :
-
-- Matrix @ #instalution:catgirl.cloud
-- [WhatsApp](https://chat.whatsapp.com/KI5jhmO2jo43vMXyo8c1iF)
-- [Telegram](https://t.me/instalution)
-
 ## Exigences
 
 Il y a actuellement quatre méthodes pour démarrer avec Instalution. Vous ne devez choisir qu'une seule méthode :
@@ -75,10 +69,6 @@ Il y a actuellement quatre méthodes pour démarrer avec Instalution. Vous ne de
 ### Statut
 
 Instalution affiche actuellement les images et les vidéos de l'archive une fois extraites. Techniquement, il n'est pas nécessaire que ce soit une archive Instagram, vous pouvez mettre n'importe quel média dans les dossiers username.
-
-Une démo est probablement disponible à l'adresse [instalution.tclv.me/owallowallo] (https://instalution.tclv.me/owallowallo).
-
-Nous espérons en avoir plus bientôt :)
 
 S'il devait y avoir un frontend avec login pour gérer les photos et les vidéos, cela pourrait être un projet séparé et à la forme la plus simple, tout ce dont il aurait besoin est un gestionnaire de fichiers fixé aux noms d'utilisateurs à `./public/accounts/[username]`. En fait, peut-être que ceux-ci pourraient éventuellement correspondre aux noms d'utilisateurs du système d'exploitation (par exemple dans `/home/` ou `C:/Users/` etc).
 
