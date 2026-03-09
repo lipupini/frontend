@@ -14,6 +14,9 @@
 # testing
 /coverage
 
+# file list cache (generated on first view)
+.file-cache/
+
 # next.js
 /.next/
 /out/
